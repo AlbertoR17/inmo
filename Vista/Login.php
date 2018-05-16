@@ -24,11 +24,15 @@
         <div class="row">
 
             <div class="col-md-6">
-                <h2 class="font-bold">Inmobiliaria</h2>
+                <h2 class="font-bold"><b>Inmobiliaria</b></h2>
 
                 <p>
                     <h3>Espacio a tu medida</h3>
                     
+                </p>
+                <br>
+                <p>
+                    Ofrecer productos de calidad y servicios utilizando la mejor tecnología disponible y aun precio razonable. Esto resulta en clientes altamente leales y a la misma vez manteniendo elinterés de los accionistas y las ganancias de la compañía en mente.
                 </p>
 
                 
@@ -36,13 +40,13 @@
             </div>
             <div class="col-md-6">
                 <div class="ibox-content">
-                    <form class="m-t" role="form" action="http://webapplayers.com/inspinia_admin-v2.7.1/index.html">
+                    <form class="m-t" method="POST" role="form" action="../Controlador/validausuario.php">
                         <center><img src="../Content/img/logo.png" alt=""></center>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Correo" required="">
+                            <input type="email" class="form-control" name="correo" placeholder="Correo" required="">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Contraseña" required="">
+                            <input type="password" class="form-control" name="contrasena" placeholder="Contraseña" required="">
                         </div>
                         <button type="submit" class="btn btn-primary block full-width m-b">Entrar</button>
 
