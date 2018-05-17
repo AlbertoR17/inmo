@@ -521,7 +521,7 @@
 
     });
     var listar = function(){
-        var table = $("#users").DataTable({
+        var table = $("#dt_usuarios").DataTable({
             pageLength: 10,
                 responsive: true,
 
@@ -539,21 +539,112 @@
                 "url":"../Controlador/usuarioController.php"
             },
             "columns":[
-                {"data":"idusuario","visible": false},
-                {"data":"nombre"},
-                {"data":"apellido"},
-                {"data":"correo"},
-                {"data":"contrasena","visible": false},
+                {"data":"id_usuario","visible": false},
+                {"data":"nombres"},
+                {"data":"apellidos"},
                 {"data":"telefono"},
-                {"data":"tipouser"}
+                {"data":"correo"},
+                {"data":"tipouser"},
+                {"data":"nbrigada"},
+                {"data":"zonaBrig"}
                 /*{"defaultContent":"<button>Editar</button>"}*/
             ]
 
         });
 
-
     }
     
 </script>
 
+<!-- mostrar datos de escuelas -->
+<script async="async">
+    $(document).ready(function(){
+        
+
+        listarEsc();
+
+    });
+    var listarEsc = function(){
+        var table = $("#escuela").DataTable({
+                destroy:true,
+                pageLength: 10,
+                responsive: true,
+                expandFirst: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                   
+                    {extend: 'excel', title: 'LISTA DE ESCUELAS'},
+                    {extend: 'pdf', title: 'LISTA DE ESCUELAS'},
+                 
+                ],
+
+            "ajax":{
+                "method":"POST",
+                "url":"../Controlador/escuelaController.php"
+            },
+            "columns":[
+                
+                {"data":"Clave"},
+                {"data":"Escuela"},
+                {"data":"Domicilio"},
+                {"data":"Localidad22"},
+                {"data":"Municipio"},
+                {"data":"Ruta33"},
+                {"defaultContent": "<button class=' info btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModal2'> Informacion</button>"},
+                {"data":"Eq","visible": false},
+                {"data":"Equip","visible": false},
+                {"data":"Reequip","visible": false},
+                {"data":"Conectividad","visible": false},
+                {"data":"Reporte","visible": false},
+                {"data":"NumRep","visible": false},
+                {"data":"Visita","visible": false},
+                {"data":"UltVisita","visible": false},
+                {"data":"FechaMant","visible": false},
+                {"data":"tipo_escuela","visible": false},
+                {"data":"concepto","visible": false},
+                {"data":"fecha","visible": false},
+                {"data":"levanto","visible": false},
+                {"data":"clavecct","visible": false},
+                {"data":"Status_Esc","visible": false}
+                
+
+               // {"defaultContent":"<button>Editar</button>"}
+            ]
+
+        });
+        obtener_data_info("#escuela tbody",table); 
+    }
+       var obtener_data_info = function (tbody, table) {
+        $(tbody).on("click","button.info", function(){
+            var data = table.row($(this).parents("tr")).data();
+            var 
+                Clave = $("#Clave").val(data.Clave),
+                Escuela = $("#Escuela").val(data.Escuela),
+                Domicilio = $("#Domicilio").val(data.Domicilio),
+                Localidad22 = $("#Localidad22").val(data.Localidad22),
+                Municipio = $("#Municipio").val(data.Municipio),
+                Ruta33 = $("#Ruta33").val(data.Ruta33),
+                Eq = $("#Eq").val(data.Eq),
+                Equip = $("#Equip").val(data.Equip),
+                Reequip= $("#Reequip").val(data.Reequip),
+                Conectividad = $("#Conectividad").val(data.Conectividad),
+                Reporte = $("#Reporte").val(data.Reporte),
+                NumRep = $("#NumRep").val(data.NumRep),
+                Visita = $("#Visita").val(data.Visita),
+                UltVisita = $("#UltVisita").val(data.UltVisita),
+                FechaMant = $("#FechaMant").val(data.FechaMant),
+                tipo_escuela = $("#tipo_escuela").val(data.tipo_escuela),
+                concepto = $("#concepto").val(data.concepto),
+                fecha = $("#fecha").val(data.fecha),
+                levanto = $("#levanto").val(data.levanto),
+                clavecct = $("#clavecct").val(data.clavecct),
+                Status_Esc = $("#Status_Esc").val(data.Status_Esc);
+
+        });
+       
+    }
+
+</script>
+<!--Estructura del ModalEscuelas-->
+<?php include 'modalEscuelas.php'; ?>
 

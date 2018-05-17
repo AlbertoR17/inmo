@@ -13,39 +13,9 @@ session_start();
 
     <title>Inmobiliaria | Registro</title>
 
-    <link href="../Content/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
+ 
 
-    <link href="../Content/css/animate.css" rel="stylesheet">
-    <link href="../Content/css/style.css" rel="stylesheet">
-    <link href="../Content/css/plugins/dropzone/basic.css" rel="stylesheet">
-    <link href="../Content/css/plugins/dropzone/dropzone.css" rel="stylesheet">
-    <link href="../Content/css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
-    <link href="../Content/css/plugins/codemirror/codemirror.css" rel="stylesheet">
-    <link href="../Content/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-
-    <link href="../Content/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
-<script>
-    function soloLetras(e){
-       key = e.keyCode || e.which;
-       tecla = String.fromCharCode(key).toLowerCase();
-       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
-       especiales = "8-37-39-46";
-
-       tecla_especial = false
-       for(var i in especiales){
-            if(key == especiales[i]){
-                tecla_especial = true;
-                break;
-            }
-        }
-
-        if(letras.indexOf(tecla)==-1 && !tecla_especial){
-            return false;
-        }
-    }
-</script>
-
+<?php include('css.php') ?>
 </head>
 
 <body >
@@ -114,7 +84,7 @@ session_start();
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
                 <!-- Inicio de contenido --> 
-                <?php include('../Vista/cont_registrar.php'); ?>
+                <?php include('../Vista/cont_perfilcliente.php'); ?>
                 <!-- Fin de contenido --> 
             </div>
         </div>
@@ -129,7 +99,7 @@ session_start();
 </div>
 
 
-
+<?php include('js.php') ?>
 <!-- Mainly scripts -->
 <script src="../Content/js/jquery-3.1.1.min.js"></script>
 <script src="../Content/js/bootstrap.min.js"></script>
@@ -143,18 +113,29 @@ session_start();
 <script src="../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
  <!-- Jasny -->
-    <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    <script src="../Content/js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
     <!-- DROPZONE -->
-    <script src="js/plugins/dropzone/dropzone.js"></script>
+    <script src="../Content/js/plugins/dropzone/dropzone.js"></script>
 
     <!-- CodeMirror -->
-    <script src="js/plugins/codemirror/codemirror.js"></script>
-    <script src="js/plugins/codemirror/mode/xml/xml.js"></script>
+    <script src="../Content/js/plugins/codemirror/codemirror.js"></script>
+    <script src="../Content/js/plugins/codemirror/mode/xml/xml.js"></script>
     
-   <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+   <script src="../Content/js/plugins/datapicker/bootstrap-datepicker.js"></script>
 
-    <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../Content/js/plugins/daterangepicker/daterangepicker.js"></script>
+
+    <script src="../Content/js/plugins/footable/footable.all.min.js"></script>
+ <script>
+        $(document).ready(function() {
+
+            $('.footable').footable();
+            $('.footable2').footable();
+
+        });
+
+    </script>
 </body>
 
 

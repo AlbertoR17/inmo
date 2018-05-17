@@ -5,6 +5,9 @@
 	<a href="../Vista/registrar.php"><i class="fa fa-id-card-o"></i> <span class="nav-label">Registrar</span></span></a>
 </li>
 <li>
+	<a href="../Vista/perfilcliente.php"><i class="fa fa-user"></i> <span class="nav-label">Perfil de cliente</span></span></a>
+</li>
+<li>
 	<a href="../Vista/usuarios.php"><i class="fa fa-users"></i> <span class="nav-label">Usuarios</span></span></a>
 </li>
 <li>
