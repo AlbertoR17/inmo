@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -29,15 +32,15 @@
                         <div class="dropdown profile-element"> <span>
                             <img alt="image" class="img-circle" src="../Content/img/profile_small.jpg" />
                         </span>
- <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">[NombreUsuario]</strong>
-                        </span> <span class="text-muted text-xs block">[TipoUsuario]<b class="caret"></b></span> </span> 
+  <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombre"]; ?>&nbsp;</strong>
+                             </span> <span class="text-muted text-xs block" style="color: white;"><?php echo $_SESSION["tipouser"]; ?> </span> 
 
                     </div>
                     <div class="logo-element">
                         Menú
                     </div>
                 </li>
-                <?php include('../Vista/Section/Menu.php'); ?>
+                <?php include('../Vista/Menu.php'); ?>
 
             </ul>
 
@@ -49,6 +52,11 @@
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" action="http://webapplayers.com/inspinia_admin-v2.7.1/search_results.html">
+                <div class="form-group"><br>
+                    <span><h5><b>Inmobiliaria</b> Espacio a tu medida</h5></span>
+                </div>
+            </form>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -87,10 +95,10 @@
                     <div class="ibox float-e-margins">
                         <div class="ibox-content text-center p-md">
 
-                            <h2><span class="text-navy">Bienvenido</span></h2>
+                            <h1><b><span class="text-navy">Bienvenido</span></b></h1>
 
                             <p>
-                                [NOMBREDEUSUARiO]
+                                <h2><b> <?php echo $_SESSION["nombre"];  ?></b></h2>
                             </p>
 
 

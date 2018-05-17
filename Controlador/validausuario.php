@@ -23,7 +23,7 @@ if (!isset($row)) {
     header("location: ../Vista/login.php");
 }
 
- $nombres   = $row["nombre"];
+ $nombre   = $row["nombre"];
  $apellidos = $row["apellido"];
 $tipouser     = $row['tipouser'];
 $id_usuario  = $row['idusuario'];
@@ -33,7 +33,7 @@ $password = $row['contrasena'];
 if ($tipouser === "Administrador") {
     if ($row["correo"] === $correo && $row["contrasena"] === $password) {
         session_start();
-         $_SESSION["nombre"]   = $nombres;
+         $_SESSION["nombre"]   = $nombre;
          $_SESSION["apellido"] = $apellidos;
         $_SESSION["idusuario"] = $id_usuario;
         $_SESSION["correo"] = $correo;

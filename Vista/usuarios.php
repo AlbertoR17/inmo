@@ -1,3 +1,6 @@
+ <?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -30,15 +33,15 @@
                             <img alt="image" class="img-circle" src="../Content/img/profile_small.jpg" />
                         </span>
 
-                        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">[NombreUsuario]</strong>
-                        </span> <span class="text-muted text-xs block">[TipoUsuario]<b class="caret"></b></span> </span> 
+                         <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombre"]; ?>&nbsp;</strong>
+                             </span> <span class="text-muted text-xs block" style="color: white;"><?php echo $_SESSION["tipouser"]; ?> </span>  
 
                     </div>
                     <div class="logo-element">
                         Menú
                     </div>
                 </li>
-                <?php include('../Vista/Section/Menu.php'); ?>
+                <?php include('../Vista/Menu.php'); ?>
 
             </ul>
 
@@ -70,7 +73,7 @@
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
                 <!-- Inicio de contenido --> 
-                <?php include('../Vista/Section/cont_usuarios.php'); ?>
+                <?php include('../Vista/cont_usuarios.php'); ?>
                 <!-- Fin de contenido --> 
             </div>
         </div>
