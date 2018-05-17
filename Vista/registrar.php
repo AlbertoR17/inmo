@@ -29,8 +29,7 @@
                         <div class="dropdown profile-element"> <span>
                             <img alt="image" class="img-circle" src="../Content/img/profile_small.jpg" />
                         </span>
-
-                        <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">[NombreUsuario]</strong>
+ <span class="clear"> <span class="block m-t-xs"> <strong class="font-bold">[NombreUsuario]</strong>
                         </span> <span class="text-muted text-xs block">[TipoUsuario]<b class="caret"></b></span> </span> 
 
                     </div>

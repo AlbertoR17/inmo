@@ -4,7 +4,7 @@
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                            <!--Boton Modal-->
-                            <button class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal2"><li class="fa fa-plus-square"></li> Agregar Usuario</button><br><br>
+                            <button class="btn btn-success btn-xs" data-toggle="modal" data-target="#myModal2"><li class="fa fa-plus-square"></li> Agregar Usuario</button><br><br>
                              <!--Estructura del Modal-->
                             <div class="modal inmodal" id="myModal2" tabindex="-1" role="dialog" aria-hidden="true">
                                 <div class="modal-dialog">
@@ -77,7 +77,7 @@
                         <div class="ibox-content">
 
                             <div class="table-responsive">
-                                <table id="users" class="table table-striped table-bordered table-hover" style="width: 100%;"><!-- dataTables-example  SON LOS QUE NO DEJAN QUE FUNCIONE EL JSON-->
+                                <table class="table table-striped table-bordered table-hover" style="width: 100%;"><!-- dataTables-example  SON LOS QUE NO DEJAN QUE FUNCIONE EL JSON-->
                                     <thead>
                                         <tr>
                                             <th style="display: none;">ID</th>
@@ -87,22 +87,42 @@
                                             <th style="display: none;">Contraseña</th>
                                             <th>Telefono</th>
                                             <th>Tipo de Empleado</th>
+                                            <th>Acción</th>
                                             
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    
+                                     <?php
+    require('../Controlador/conec.php');
+    $rs = mysqli_query($con, "SELECT * FROM usuario");
+
+      while($row = mysqli_fetch_row($rs)){
+
+      echo "<tr style='font-weight:bold;'>";  
+      echo "<td>" . $row['1'] .  "</td>";
+      echo "<td> ". $row['2'] . "</td>";
+      echo "<td> ". $row['3'] . "</td>"; 
+      echo "<td> ". $row['5'] . "</td>"; 
+      echo "<td> ". $row['6'] . "</td>";   
+      echo "<td> <a class='btn btn-success' href=''>Editar </a> <a class='btn btn-success' href=''>Borrar</a> </td>";  
+     
+       
+        
+        echo "</tr>";   
+      }
+       
+
+      mysqli_close($con);
+    ?>   
                                     </tbody>
                                        <tfoot>
                                          <tr>
-                                            <th style="display: none;">ID</th>
                                             <th>Nombre(s)</th>
                                             <th>Apellido(s)</th>
                                             <th>Email</th>
-                                            <th style="display: none;">Contraseña</th>
                                             <th>Telefono</th>
                                             <th>Tipo de Empleado</th>
-                                            
+                                            <th>Acción</th>
                                         </tr>
                                     </tfoot> 
                                 </table>

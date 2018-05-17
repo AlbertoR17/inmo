@@ -11,7 +11,7 @@
     <title>Inmobiliaria</title>
 
     <link href="../Content/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../Contentfont-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <link href="../Content/css/animate.css" rel="stylesheet">
     <link href="../Content/css/style.css" rel="stylesheet">

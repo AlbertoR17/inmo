@@ -1,6 +1,11 @@
 <?php 
-include '../Controlador/conec.php';
-$q = "SELECT * FROM usuarios ORDER BY idusuario Desc";
+$db="inmo";
+$host="localhost";
+$pw="";
+$user="root";
+
+$con = mysqli_connect($host,$user,$pw,$db) or die("Error al conectar ".mysql_error());
+$q = "SELECT * FROM usuario";
 $ejecutar_q = mysqli_query($con, $q);
 if (!$ejecutar_q) {
     die("ERROR");

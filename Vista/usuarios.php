@@ -87,7 +87,7 @@
 
 
 <!-- Mainly scripts -->
-<?PHP include "../Content/js/js.php";?>
+<?PHP include "../Vista/js.php";?>
 <script src="../Content/js/jquery-3.1.1.min.js"></script>
 <script src="../Content/js/bootstrap.min.js"></script>
 <script src="../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>

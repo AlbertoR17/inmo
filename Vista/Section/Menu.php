@@ -1,5 +1,5 @@
 <li>
-	<a href="#"><i class="fa fa-home"></i> <span class="nav-label">Inicio</span></span></a>
+	<a href="../Vista/inicio.php"><i class="fa fa-home"></i> <span class="nav-label">Inicio</span></span></a>
 </li>
 <li>
 	<a href="../Vista/registrar.php"><i class="fa fa-id-card-o"></i> <span class="nav-label">Registrar</span></span></a>

@@ -1,7 +1,7 @@
 
 <?php
 session_start();
-
+unset($_SESSION["nombre"]);
 $correo = trim($_POST['correo']);
 $password = trim($_POST['contrasena']);
 
@@ -23,8 +23,8 @@ if (!isset($row)) {
     header("location: ../Vista/login.php");
 }
 
-// $nombres   = $row["nombres"];
-// $apellidos = $row["apellidos"];
+ $nombres   = $row["nombre"];
+ $apellidos = $row["apellido"];
 $tipouser     = $row['tipouser'];
 $id_usuario  = $row['idusuario'];
 $correo   = $row['correo'];
@@ -33,9 +33,9 @@ $password = $row['contrasena'];
 if ($tipouser === "Administrador") {
     if ($row["correo"] === $correo && $row["contrasena"] === $password) {
         session_start();
-        // $_SESSION["nombres"]   = $nombres;
-        // $_SESSION["apellidos"] = $apellidos;
-        $_SESSION["id_usuario"] = $id_usuario;
+         $_SESSION["nombre"]   = $nombres;
+         $_SESSION["apellido"] = $apellidos;
+        $_SESSION["idusuario"] = $id_usuario;
         $_SESSION["correo"] = $correo;
         $_SESSION["tipouser"] = $tipouser;
 
@@ -59,8 +59,8 @@ if ($tipouser === "Administrador") {
 }else if ($tipouser === "Recepcion") {
     if ($row["correo"] === $correo && $row["contrasena"] === $password) {
         session_start();
-        // $_SESSION["nombres"]   = $nombres;
-        // $_SESSION["apellidos"] = $apellidos;
+         $_SESSION["nombres"]   = $nombres;
+         $_SESSION["apellidos"] = $apellidos;
         $_SESSION["id_usuario"] = $id_usuario;
         $_SESSION["correo"] = $correo;
         $_SESSION["tipouser"] = $tipouser;
@@ -85,8 +85,8 @@ if ($tipouser === "Administrador") {
 }else if ($tipouser === "Venta") {
     if ($row["correo"] === $correo && $row["contrasena"] === $password) {
         session_start();
-        // $_SESSION["nombres"]   = $nombres;
-        // $_SESSION["apellidos"] = $apellidos;
+         $_SESSION["nombres"]   = $nombres;
+         $_SESSION["apellidos"] = $apellidos;
         $_SESSION["id_usuario"] = $id_usuario;
         $_SESSION["correo"] = $correo;
         $_SESSION["tipouser"] = $tipouser;
@@ -111,8 +111,8 @@ if ($tipouser === "Administrador") {
 }else if ($tipouser === "Renta") {
     if ($row["correo"] === $correo && $row["contrasena"] === $password) {
         session_start();
-        // $_SESSION["nombres"]   = $nombres;
-        // $_SESSION["apellidos"] = $apellidos;
+         $_SESSION["nombres"]   = $nombres;
+         $_SESSION["apellidos"] = $apellidos;
         $_SESSION["id_usuario"] = $id_usuario;
         $_SESSION["correo"] = $correo;
         $_SESSION["tipouser"] = $tipouser;
