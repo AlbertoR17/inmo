@@ -21,11 +21,11 @@ session_start();
 
 </head>
 
-<body >
+<body>
 
     <div id="wrapper">
 
-        <nav class="navbar-default navbar-static-side" role="navigation" >
+        <nav class="navbar-default navbar-static-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
@@ -47,13 +47,13 @@ session_start();
         </div>
     </nav>
 
-    <div id="page-wrapper" class="gray-bg" style="background-image: url('../Content/img/bg.jpg');">
-        <div class="row border-bottom" >
-            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0" >
-                <div class="navbar-header" >
+    <div id="page-wrapper" class="gray-bg">
+        <div class="row border-bottom">
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+                <div class="navbar-header">
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    <form role="search" class="navbar-form-custom" >
-                <div class="form-group" ><br>
+                    <form role="search" class="navbar-form-custom" action="http://webapplayers.com/inspinia_admin-v2.7.1/search_results.html">
+                <div class="form-group"><br>
                     <span><h5><b>Inmobiliaria</b> Espacio a tu medida</h5></span>
                 </div>
             </form>
@@ -89,29 +89,13 @@ session_start();
 
 
 
-        <div class="wrapper wrapper-content animated fadeInRight"  >
-            <div class="row" >
-                <div class="col-lg-12" >
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-content text-center p-md">
-
-                            <h1><b><span class="text-navy">Bienvenido</span></b></h1>
-
-                            <p>
-                                <h2><b> <?php echo $_SESSION["nombre"];  ?></b></h2>
-                            </p>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" >
+        
+            <div class="row">
                 <!-- Inicio de contenido --> 
-                <?php //include('../Vista/Section/'); ?>
+                <?php include('../Vista/editarusuariopant.php'); ?>
                 <!-- Fin de contenido --> 
             </div>
-        </div>
+       
         <div class="footer" >
             <div class="pull-right">
                Copyright <b>Inmobiliaria</b> &copy; <?php echo date('Y') ?>

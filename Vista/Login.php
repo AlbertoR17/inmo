@@ -18,7 +18,7 @@
 
 </head>
 
-<body class="gray-bg">
+<body class="gray-bg" style="background-image: url('../Content/img/bg.jpg');">
 
     <div class="loginColumns animated fadeInDown">
         <div class="row">
