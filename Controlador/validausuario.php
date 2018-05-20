@@ -97,7 +97,7 @@ if ($tipouser === "Administrador") {
                 alert(mensaje);
                 </script>";
 
-        header("location: ../Vista/Ventas/iniciorecepcion.php");
+        header("location: ../Vista/Ventas/inicioventas.php");
 
     } else {
         echo "

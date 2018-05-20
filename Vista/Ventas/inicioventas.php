@@ -12,13 +12,13 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Inmobiliaria | Inicio</title>
+    <title>Inmobiliaria | Ventas</title>
 
-    <link href="../Content/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../../Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <link href="../Content/css/animate.css" rel="stylesheet">
-    <link href="../Content/css/style.css" rel="stylesheet">
+    <link href="../../Content/css/animate.css" rel="stylesheet">
+    <link href="../../Content/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -31,7 +31,7 @@ session_start();
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="../Content/img/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="../../Content/img/profile_small.jpg" />
                         </span>
   <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombre"]; ?>&nbsp;</strong>
                              </span> <span class="text-muted text-xs block" style="color: white;"><?php echo $_SESSION["tipouser"]; ?> </span> 
@@ -41,19 +41,13 @@ session_start();
                         Menú
                     </div>
                 </li>
-                <?php //include('../Vista/Menu.php'); 
+                <?php //include('../../Vista/Menu.php'); 
 
-                if ($_SESSION["tipouser"] === 'Administrador') {
-                       include('../Vista/Admin/Menu.php');
-                    }elseif ($_SESSION["tipouser"] === 'Recepcion') {
-                        
-                        include('../Vista/Recepcion/Menurecepcion.php');
-                    }elseif ($_SESSION["tipouser"] === 'Venta') {
-                        
-                        include('../Vista/Ventas/Menuventas.php');
+                if ($_SESSION["tipouser"] === 'Venta') {
+                      include('../../Vista/Ventas/Menuventas.php');
                     }else{
                         echo "<script>alert('Inicie sesion');</script>";
-                        header("location: ../Vista/login.php");
+                        header("location: ../../Vista/login.php");
                     }
                 ?>
 
@@ -62,7 +56,7 @@ session_start();
         </div>
     </nav>
 
-    <div id="page-wrapper" class="gray-bg" style="background-image: url('../Content/img/bg.jpg');">
+    <div id="page-wrapper" class="gray-bg" style="background-image: url('../../Content/img/bg.jpg');">
         <div class="row border-bottom" >
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0" >
                 <div class="navbar-header" >
@@ -78,7 +72,7 @@ session_start();
                     <script type="text/javascript">
                         function getTimeAJAX() {   
                             var time = $.ajax({
-                                url: '../Controlador/horaser.php', //indicamos la ruta donde se genera la hora
+                                url: '../../Controlador/horaser.php', //indicamos la ruta donde se genera la hora
                                 dataType: 'text',//indicamos que es de tipo texto plano
                                 async: false     //ponemos el parámetro asyn a falso
                             }).responseText;
@@ -93,7 +87,7 @@ session_start();
 
 
                     <li>
-                        <a href="../Controlador/Salir.php">
+                        <a href="../../Controlador/Salir.php">
                             <i class="fa fa-sign-out"></i> Salir
                         </a>
                     </li>
@@ -123,7 +117,7 @@ session_start();
             </div>
             <div class="row" >
                 <!-- Inicio de contenido --> 
-                <?php //include('../Vista/Section/'); ?>
+                <?php //include('../../Vista/Section/'); ?>
                 <!-- Fin de contenido --> 
             </div>
         </div>
@@ -140,16 +134,16 @@ session_start();
 
 
 <!-- Mainly scripts -->
-<script src="../Content/js/jquery-3.1.1.min.js"></script>
-<script src="../Content/js/bootstrap.min.js"></script>
-<script src="../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../Content/js/jquery-3.1.1.min.js"></script>
+<script src="../../Content/js/bootstrap.min.js"></script>
+<script src="../../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="../../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="../Content/js/inspinia.js"></script>
-<script src="../Content/js/plugins/pace/pace.min.js"></script>
+<script src="../../Content/js/inspinia.js"></script>
+<script src="../../Content/js/plugins/pace/pace.min.js"></script>
 
-<script src="../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 
 </body>

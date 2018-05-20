@@ -20,6 +20,8 @@ session_start();
     <link href="../../Content/css/animate.css" rel="stylesheet">
     <link href="../../Content/css/style.css" rel="stylesheet">
 
+    <link href="../../Content/css/plugins/footable/footable.core.css" rel="stylesheet">
+
 </head>
 
 <body >
@@ -43,8 +45,8 @@ session_start();
                 </li>
                 <?php //include('../Vista/Menu.php'); 
 
-                if ($_SESSION["tipouser"] === 'Recepcion') {
-                    include('../../Vista/Recepcion/Menurecepcion.php');
+                if ($_SESSION["tipouser"] === 'Venta') {
+                    include('../../Vista/Ventas/Menuventas.php');
                 }else{
                         echo "<script>alert('Inicie sesion');</script>";
                         header("location: ../../Vista/login.php");
@@ -99,25 +101,10 @@ session_start();
 
 
         <div class="wrapper wrapper-content animated fadeInRight"  >
-            <div class="row" >
-                <div class="col-lg-12" >
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-content text-center p-md">
-
-                            <h1><b><span class="text-navy">Bienvenido</span></b></h1>
-
-                            <p>
-                                <h2><b> <?php echo $_SESSION["nombre"];  ?></b></h2>
-                            </p>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="row" >
                 <!-- Inicio de contenido --> 
-                <?php //include('../Vista/Section/'); ?>
+                <?php include('../../Vista/Ventas/cont_clientesventas.php'); ?>
                 <!-- Fin de contenido --> 
             </div>
         </div>
@@ -134,6 +121,8 @@ session_start();
 
 
 <!-- Mainly scripts -->
+
+
 <script src="../../Content/js/jquery-3.1.1.min.js"></script>
 <script src="../../Content/js/bootstrap.min.js"></script>
 <script src="../../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
@@ -144,8 +133,16 @@ session_start();
 <script src="../../Content/js/plugins/pace/pace.min.js"></script>
 
 <script src="../../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../Content/js/plugins/footable/footable.all.min.js"></script>
+<script>
+        $(document).ready(function() {
 
+            $('.footable').footable();
+            $('.footable2').footable();
 
+        });
+
+    </script>
 </body>
 
 
