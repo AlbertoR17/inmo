@@ -11,7 +11,7 @@
 	<a href="../../Vista/Ventas/catalogo.php"><i class="fa fa-th"></i> <span class="nav-label">Catalogo</span></span></a>
 </li>
 <li>
-	<a href=""><i class="fa fa-list-alt"></i> <span class="nav-label">Ventas</span></span></a>
+	<a href="../../Vista/Ventas/clientelistopago.php"><i class="fa fa-list-alt"></i> <span class="nav-label">Clientes pendientes de pago</span></span></a>
 </li>
 <li>
 	<a href=""><i class="fa fa-files-o"></i> <span class="nav-label">Facturación</span></span></a>

@@ -57,7 +57,7 @@
                      
                      </div>
                      <div class='m-t text-righ'>
-                     <a href='../../Controlador/seleccionaterreno.php?idu=".$idterreno."&idt=".$aidi." class='btn btn-success btn-sm'> Seleccionar </a>
+                     <a href='../../Controlador/seleccionaterreno.php?idc=".$aidi."&idt=".$idterreno."' class='btn btn-success btn-sm'> Seleccionar </a>
                      </div>
                      </div>
                      </div>
