@@ -48,6 +48,7 @@ session_start();
                 if ($_SESSION["tipouser"] === 'Venta') {
                     include('../../Vista/Ventas/Menuventas.php');
                 }else{
+                    session_destroy();
                         echo "<script>alert('Inicie sesion');</script>";
                         header("location: ../../Vista/login.php");
                     }

@@ -4,14 +4,11 @@
 <li>
 	<a href="../../Vista/Ventas/clientesventas.php"><i class="fa fa-id-card-o"></i> <span class="nav-label">Clientes</span></span></a>
 </li>
-<li>
-	<a href="../../Vista/Ventas/registrar.php"><i class="fa fa-id-card-o"></i> <span class="nav-label">Registrar</span></span></a>
-</li>
-<li>
+<!-- <li>
 	<a href="../../Vista/Ventas/perfilcliente.php"><i class="fa fa-user"></i> <span class="nav-label">Perfil de cliente</span></span></a>
-</li>
+</li> -->
 <li>
-	<a href=""><i class="fa fa-th"></i> <span class="nav-label">Catalogo</span></span></a>
+	<a href="../../Vista/Ventas/catalogo.php"><i class="fa fa-th"></i> <span class="nav-label">Catalogo</span></span></a>
 </li>
 <li>
 	<a href=""><i class="fa fa-list-alt"></i> <span class="nav-label">Ventas</span></span></a>

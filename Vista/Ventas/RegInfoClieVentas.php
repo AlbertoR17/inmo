@@ -1,6 +1,15 @@
 <?php 
 session_start();
-
+$idcli=$_GET['id'];
+require('../../Controlador/conec.php');
+    $rs = mysqli_query($con, "SELECT idcliente,nombres,apellidos,telefonoper,correoper FROM cliente where idcliente ='$idcli'");
+    $row = mysqli_fetch_array($rs);
+    $idcliente =$idcli;
+    $nombres=$row['nombres'];
+    $apellidos=$row['apellidos'];
+    $telefonoper=$row['telefonoper'];
+    $correoper=$row['correoper']; 
+mysqli_close($con);
 ?>
 <!DOCTYPE html>
 <html>
@@ -100,25 +109,10 @@ session_start();
 
 
         <div class="wrapper wrapper-content animated fadeInRight"  >
-            <div class="row" >
-                <div class="col-lg-12" >
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-content text-center p-md">
-
-                            <h1><b><span class="text-navy">Bienvenido</span></b></h1>
-
-                            <p>
-                                <h2><b> <?php echo $_SESSION["nombre"];  ?></b></h2>
-                            </p>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="row" >
                 <!-- Inicio de contenido --> 
-                <?php //include('../../Vista/Section/'); ?>
+                <?php include('../../Vista/Ventas/cont_RegInfoClieVentas.php'); ?>
                 <!-- Fin de contenido --> 
             </div>
         </div>

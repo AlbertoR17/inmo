@@ -1,5 +1,6 @@
 <?php 
 session_start();
+$aidi=$_GET['idus'];
 
 ?>
 <!DOCTYPE html>
@@ -16,9 +17,13 @@ session_start();
 
     <link href="../../Content/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
-
+    
+    <link href="../../css/plugins/slick/slick.css" rel="stylesheet">
+    <link href="../../css/plugins/slick/slick-theme.css" rel="stylesheet">
+    
     <link href="../../Content/css/animate.css" rel="stylesheet">
     <link href="../../Content/css/style.css" rel="stylesheet">
+
 
 </head>
 
@@ -100,26 +105,14 @@ session_start();
 
 
         <div class="wrapper wrapper-content animated fadeInRight"  >
-            <div class="row" >
-                <div class="col-lg-12" >
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-content text-center p-md">
-
-                            <h1><b><span class="text-navy">Bienvenido</span></b></h1>
-
-                            <p>
-                                <h2><b> <?php echo $_SESSION["nombre"];  ?></b></h2>
-                            </p>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="row" >
                 <!-- Inicio de contenido --> 
-                <?php //include('../../Vista/Section/'); ?>
+                <?php include('../../Vista/Ventas/cont_catalogo.php'); ?>
                 <!-- Fin de contenido --> 
+
+
+                
             </div>
         </div>
         <div class="footer" >
@@ -144,7 +137,19 @@ session_start();
 <script src="../../Content/js/inspinia.js"></script>
 <script src="../../Content/js/plugins/pace/pace.min.js"></script>
 
-<script src="../../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../Content/js/plugins/slick/slick.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+
+
+        $('.product-images').slick({
+            dots: true
+        });
+
+    });
+
+</script>
 
 
 </body>

@@ -36,7 +36,7 @@
                           echo "<td> ". $row['apellidos'] . "</td>";
                           echo "<td> ". $row['correoper'] . "</td>"; 
                           echo "<td> ". $row['telefonoper'] . "</td>"; 
-                          echo "<td> <a href='../../Controlador/elminausuario.php?id=".$row['idcliente']."' class='btn btn-success'> Borrar</a> </td>";  
+                          echo "<td> <a href='../Ventas/RegInfoClieVentas.php?id=".$row['idcliente']."' class='btn btn-success'>Seleccionar</a> </td>";  
                           echo "</tr>";   
                       }
 
