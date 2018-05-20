@@ -15,23 +15,23 @@
                                 <h4 class="modal-title">Agregar Usuario</h4>
                             </div>
                             <div class="modal-body" >
-                              <form  method="POST" action="../Modelo/RegistroUsuarios.php" id="formLimpiar" class="form-group">
+                              <form  method="POST" action="../../Modelo/RegistroUsuarios.php" id="formLimpiar" class="form-group">
 
                                 <div class="form-group col-md-6">
-                                    <label>Nombre(s)</label><input type="text" name="nombres" placeholder="Nombre(s)" class="form-control
+                                    <label>Nombre(s)</label><input required type="text" name="nombres" placeholder="Nombre(s)" class="form-control
                                     " pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label>Apellido(s)</label><input type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+                                    <label>Apellido(s)</label><input required type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label>Correo</label><input type="email" name="correo" placeholder="Correo" class="form-control" pattern="^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required="">
+                                    <label>Correo</label><input required type="email" name="correo" placeholder="Correo" class="form-control" pattern="^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required="">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label>Contraseña</label><input type="password" name="pass" placeholder="Contraseña" class="form-control" pattern="[A-Za-z0-9!?-]{6,12}" required="">
+                                    <label>Contraseña</label><input required type="password" name="pass" placeholder="Contraseña" class="form-control" pattern="[A-Za-z0-9!?-]{6,12}" required="">
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label>Telefono</label><input type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
+                                    <label>Telefono</label><input required type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Tipo de Usuario</label> 
@@ -40,7 +40,7 @@
                                        <option value="Administrador">Administrador</option>
                                        <option value="Recepcion">Recepcion</option>
                                        <option value="Venta" >Agente de venta</option>
-                                       <option value="Renta">Agente de renta</option>
+                                       
 
                                    </select>
                                </div>
@@ -93,7 +93,7 @@
                     </thead>
                     <tbody>
                        <?php
-                       require('../Controlador/conec.php');
+                       require('../../Controlador/conec.php');
                        $rs = mysqli_query($con, "SELECT * FROM usuario");
 
                        while($row = mysqli_fetch_array($rs)){
@@ -105,7 +105,7 @@
                           echo "<td> ". $row['telefono'] . "</td>"; 
                           echo "<td> ". $row['tipouser'] . "</td>";   
                           echo "<td> 
-                          <a href='../Controlador/elminausuario.php?id=".$row['idusuario']."' class='btn btn-success'> Borrar</a> </td>";  
+                          <a href='../../Controlador/elminausuario.php?id=".$row['idusuario']."' class='btn btn-success'> Borrar</a> </td>";  
 
 
 

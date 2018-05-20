@@ -8,16 +8,10 @@
 	<a href="../Vista/perfilcliente.php"><i class="fa fa-user"></i> <span class="nav-label">Perfil de cliente</span></span></a>
 </li>
 <li>
-	<a href="../Vista/usuarios.php"><i class="fa fa-users"></i> <span class="nav-label">Usuarios</span></span></a>
-</li>
-<li>
 	<a href=""><i class="fa fa-th"></i> <span class="nav-label">Catalogo</span></span></a>
 </li>
 <li>
 	<a href=""><i class="fa fa-list-alt"></i> <span class="nav-label">Ventas</span></span></a>
-</li>
-<li>
-	<a href=""><i class="fa fa-list-alt"></i> <span class="nav-label">Rentas</span></span></a>
 </li>
 <li>
 	<a href=""><i class="fa fa-files-o"></i> <span class="nav-label">Facturación</span></span></a>

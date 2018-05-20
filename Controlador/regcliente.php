@@ -41,7 +41,7 @@ $q= "INSERT INTO cliente (
 $ejecuta_q= mysqli_query($con,$q) or die("error al insertar");
 
 mysqli_close($con);
-header('Location: ../Vista/registrar.php');
+header('Location: ../../Vista/Admin/registrar.php');
 //}
 
 

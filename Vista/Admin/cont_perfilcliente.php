@@ -35,7 +35,7 @@
                                 </thead>
                                 <tbody>
                                       <?php
-                 require('../Controlador/conec.php');
+                 require('../../Controlador/conec.php');
                  $rs = mysqli_query($con, "SELECT * FROM cliente");
                  while($row=mysqli_fetch_array($rs))
                  {

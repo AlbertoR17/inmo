@@ -1,5 +1,6 @@
- <?php 
+<?php 
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,40 +12,13 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Inmobiliaria | Registro</title>
+    <title>Inmobiliaria | Inicio</title>
 
     <link href="../Content/css/bootstrap.min.css" rel="stylesheet">
     <link href="../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <link href="../Content/css/animate.css" rel="stylesheet">
     <link href="../Content/css/style.css" rel="stylesheet">
-    <link href="../Content/css/plugins/dropzone/basic.css" rel="stylesheet">
-    <link href="../Content/css/plugins/dropzone/dropzone.css" rel="stylesheet">
-    <link href="../Content/css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
-    <link href="../Content/css/plugins/codemirror/codemirror.css" rel="stylesheet">
-    <link href="../Content/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
-
-    <link href="../Content/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
-<script>
-    function soloLetras(e){
-       key = e.keyCode || e.which;
-       tecla = String.fromCharCode(key).toLowerCase();
-       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
-       especiales = "8-37-39-46";
-
-       tecla_especial = false
-       for(var i in especiales){
-            if(key == especiales[i]){
-                tecla_especial = true;
-                break;
-            }
-        }
-
-        if(letras.indexOf(tecla)==-1 && !tecla_especial){
-            return false;
-        }
-    }
-</script>
 
 </head>
 
@@ -52,14 +26,14 @@ session_start();
 
     <div id="wrapper">
 
-        <nav class="navbar-default navbar-static-side" role="navigation">
+        <nav class="navbar-default navbar-static-side" role="navigation" >
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
                             <img alt="image" class="img-circle" src="../Content/img/profile_small.jpg" />
                         </span>
-                         <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombre"]; ?>&nbsp;</strong>
+  <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombre"]; ?>&nbsp;</strong>
                              </span> <span class="text-muted text-xs block" style="color: white;"><?php echo $_SESSION["tipouser"]; ?> </span> 
 
                     </div>
@@ -67,7 +41,21 @@ session_start();
                         Menú
                     </div>
                 </li>
-                <?php include('../Vista/Menu.php'); ?>
+                <?php //include('../Vista/Menu.php'); 
+
+                if ($_SESSION["tipouser"] === 'Administrador') {
+                       include('../Vista/Admin/Menu.php');
+                    }elseif ($_SESSION["tipouser"] === 'Recepcion') {
+                        
+                        include('../Vista/Recepcion/Menurecepcion.php');
+                    }elseif ($_SESSION["tipouser"] === 'Venta') {
+                        
+                        include('../Vista/Ventas/Menuventas.php');
+                    }else{
+                        echo "<script>alert('Inicie sesion');</script>";
+                        header("location: ../Vista/login.php");
+                    }
+                ?>
 
             </ul>
 
@@ -75,10 +63,15 @@ session_start();
     </nav>
 
     <div id="page-wrapper" class="gray-bg" style="background-image: url('../Content/img/bg.jpg');">
-        <div class="row border-bottom">
-            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-                <div class="navbar-header">
+        <div class="row border-bottom" >
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0" >
+                <div class="navbar-header" >
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" >
+                <div class="form-group" ><br>
+                    <span><h5><b>Inmobiliaria</b> Espacio a tu medida</h5></span>
+                </div>
+            </form>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -111,10 +104,26 @@ session_start();
 
 
 
-        <div class="wrapper wrapper-content animated fadeInRight">
-            <div class="row">
+        <div class="wrapper wrapper-content animated fadeInRight"  >
+            <div class="row" >
+                <div class="col-lg-12" >
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content text-center p-md">
+
+                            <h1><b><span class="text-navy">Bienvenido</span></b></h1>
+
+                            <p>
+                                <h2><b> <?php echo $_SESSION["nombre"];  ?></b></h2>
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" >
                 <!-- Inicio de contenido --> 
-                <?php include('../Vista/cont_registrar.php'); ?>
+                <?php //include('../Vista/Section/'); ?>
                 <!-- Fin de contenido --> 
             </div>
         </div>
@@ -142,19 +151,7 @@ session_start();
 
 <script src="../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
- <!-- Jasny -->
-    <script src="js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
-    <!-- DROPZONE -->
-    <script src="js/plugins/dropzone/dropzone.js"></script>
-
-    <!-- CodeMirror -->
-    <script src="js/plugins/codemirror/codemirror.js"></script>
-    <script src="js/plugins/codemirror/mode/xml/xml.js"></script>
-    
-   <script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
-
-    <script src="js/plugins/daterangepicker/daterangepicker.js"></script>
 </body>
 
 

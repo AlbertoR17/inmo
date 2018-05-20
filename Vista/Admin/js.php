@@ -2,86 +2,86 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
-    <script src="../Include/js/jquery-3.1.1.min.js"></script>
-    <script src="../Include/js/bootstrap.min.js"></script>
-    <script src="../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="../Include/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="../../DataTables/datatables.js"></script>
+    <script src="../../Include/js/jquery-3.1.1.min.js"></script>
+    <script src="../../Include/js/bootstrap.min.js"></script>
+    <script src="../../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../../Include/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
     <!-- Custom and plugin javascript -->
-    <script src="../Include/js/inspinia.js"></script>
-    <script src="../Include/js/plugins/pace/pace.min.js"></script>
+    <script src="../../Include/js/inspinia.js"></script>
+    <script src="../../Include/js/plugins/pace/pace.min.js"></script>
 
     <!-- Flot -->
-    <script src="../Include/js/plugins/flot/jquery.flot.js"></script>
-    <script src="../Include/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
-    <script src="../Include/js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="../../Include/js/plugins/flot/jquery.flot.js"></script>
+    <script src="../../Include/js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="../../Include/js/plugins/flot/jquery.flot.resize.js"></script>
 
     <!-- ChartJS-->
-    <script src="../Include/js/plugins/chartJs/Chart.min.js"></script>
+    <script src="../../Include/js/plugins/chartJs/Chart.min.js"></script>
 
     <!-- Peity -->
-    <script src="../Include/js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="../../Include/js/plugins/peity/jquery.peity.min.js"></script>
     <!-- Peity demo -->
-    <script src="../Include/js/demo/peity-demo.js"></script>
+    <script src="../../Include/js/demo/peity-demo.js"></script>
      <!-- iCheck -->
-    <script src="../Include/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="../../Include/js/plugins/iCheck/icheck.min.js"></script>
 
-    <script src="../Include/js/plugins/footable/footable.all.min.js"></script>
-    <script src="../Include/js/plugins/dataTables/datatables.min.js"></script>
+    <script src="../../Include/js/plugins/footable/footable.all.min.js"></script>
+    <script src="../../Include/js/plugins/dataTables/datatables.min.js"></script>
      <!-- Chosen -->
-    <script src="../Include/js/plugins/chosen/chosen.jquery.js"></script>
+    <script src="../../Include/js/plugins/chosen/chosen.jquery.js"></script>
 
    <!-- JSKnob -->
-   <script src="../Include/js/plugins/jsKnob/jquery.knob.js"></script>
+   <script src="../../Include/js/plugins/jsKnob/jquery.knob.js"></script>
 
    <!-- Input Mask-->
-    <script src="../Include/js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    <script src="../../Include/js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
    <!-- Data picker -->
-   <script src="../Include/js/plugins/datapicker/bootstrap-datepicker.js"></script>
-   <script src="../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
+   <script src="../../Include/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+   <script src="../../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
    <!-- NouSlider -->
-   <script src="../Include/js/plugins/nouslider/jquery.nouislider.min.js"></script>
+   <script src="../../Include/js/plugins/nouslider/jquery.nouislider.min.js"></script>
 
    <!-- Switchery -->
-   <script src="../Include/js/plugins/switchery/switchery.js"></script>
+   <script src="../../Include/js/plugins/switchery/switchery.js"></script>
 
     <!-- IonRangeSlider -->
-    <script src="../Include/js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
+    <script src="../../Include/js/plugins/ionRangeSlider/ion.rangeSlider.min.js"></script>
 
     <!-- iCheck -->
-    <script src="../Include/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="../../Include/js/plugins/iCheck/icheck.min.js"></script>
 
     <!-- MENU -->
-    <script src="../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../../Include/js/plugins/metisMenu/jquery.metisMenu.js"></script>
 
     <!-- Color picker -->
-    <script src="../Include/js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="../../Include/js/plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
 
     <!-- Clock picker -->
-    <script src="../Include/js/plugins/clockpicker/clockpicker.js"></script>
+    <script src="../../Include/js/plugins/clockpicker/clockpicker.js"></script>
 
     <!-- Image cropper -->
-    <script src="../Include/js/plugins/cropper/cropper.min.js"></script>
+    <script src="../../Include/js/plugins/cropper/cropper.min.js"></script>
 
     <!-- Date range use moment.js same as full calendar plugin -->
-    <script src="../Include/js/plugins/fullcalendar/moment.min.js"></script>
+    <script src="../../Include/js/plugins/fullcalendar/moment.min.js"></script>
 
     <!-- Date range picker -->
-    <script src="../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="../../Include/js/plugins/daterangepicker/daterangepicker.js"></script>
 
     <!-- Select2 -->
-    <script src="../Include/js/plugins/select2/select2.full.min.js"></script>
+    <script src="../../Include/js/plugins/select2/select2.full.min.js"></script>
 
     <!-- TouchSpin -->
-    <script src="../Include/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="../../Include/js/plugins/touchspin/jquery.bootstrap-touchspin.min.js"></script>
 
     <!-- Tags Input -->
-    <script src="../Include/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    <script src="../../Include/js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
 
     <!-- Dual Listbox -->
-    <script src="../Include/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
+    <script src="../../../Include/js/plugins/dualListbox/jquery.bootstrap-duallistbox.js"></script>
 
     
 
@@ -97,18 +97,20 @@
               $('#mostrar').children('div').hide();
               $('#mostrar').children(selectValor).show();
             });
-             
+
            $("#btnLimpiar").click(function(event) {
            $("#formLimpiar")[0].reset();
             });
             $('.footable').footable();
             $('.footable2').footable();
 
+
+
         });
 
     </script>
         <!-- Sweet alert -->
-    <script src="../Include/js/plugins/sweetalert/sweetalert.min.js"></script>
+    <script src="../../Include/js/plugins/sweetalert/sweetalert.min.js"></script>
 
 <script>
 
@@ -147,8 +149,8 @@
 
         $('.demo4').click(function () {
             swal({
-                        title: "DESEAS ELIMINAR EL USUARIO?",
-                        text: "Al ELIMINAR este usuario se quitara de su lista",
+                        title: "Deseas ELIMINAR?",
+                        text: "Al ELIMINAR esta opcion se quitara de tu lista",
                         type: "warning",
                         showCancelButton: true,
                         confirmButtonColor: "#DD6B55",
@@ -160,7 +162,7 @@
                         if (isConfirm) {
                             swal("ELIMINADO!", "Se elimino correctamente", "success");
                         } else {
-                            swal("CANCELADO", "Usted a cancelado", "error");
+                            swal("Cancelado", "Usted a cancelado", "error");
                         }
                     });
         });
@@ -511,20 +513,16 @@
 
 
     </script>
-
-
-<!-- mostrar datos de escuelas -->
-<script async="async">
+<!-- mostrar datos de usuarios -->
+<script>
     $(document).ready(function(){
-        
 
-        listarPerfil();
+        listar();
 
     });
-    var listarPerfil = function(){
-        var table = $("#perfiles").DataTable({
-                destroy:true,
-                pageLength: 10,
+    var listar = function(){
+        var table = $("#dt_usuarios").DataTable({
+            pageLength: 10,
                 responsive: true,
 
                 dom: '<"html5buttons"B>lTfgitp',
@@ -534,77 +532,119 @@
                     {extend: 'pdf', title: 'ExampleFile'},
                  
                 ],
+                "destroy":true,
 
             "ajax":{
                 "method":"POST",
-                "url":"../Controlador/perfilesController.php"
+                "url":"../../Controlador/usuarioController.php"
             },
             "columns":[
-                {"data":"idusuario","visible": false},
-                {"data":"nombre"},
-                {"data":"apellido"},
-                {"data":"correo"},
-                {"data":"contrasena","visible": false},
+                {"data":"id_usuario","visible": false},
+                {"data":"nombres"},
+                {"data":"apellidos"},
                 {"data":"telefono"},
+                {"data":"correo"},
                 {"data":"tipouser"},
-                
-                {"defaultContent": "<button class='edit btn btn-primary btn-xs' data-toggle='modal' data-target='#myModal3'> Editar</button> <button class='eliminar btn btn-danger btn-xs'> Eliminar</button>"}
-                
+                {"data":"nbrigada"},
+                {"data":"zonaBrig"}
+                /*{"defaultContent":"<button>Editar</button>"}*/
             ]
 
         });
 
+    }
+    
+</script>
+
+<!-- mostrar datos de escuelas -->
+<script async="async">
+    $(document).ready(function(){
         
-        obtener_data_edit("#perfiles tbody",table);
-        obtener_data_eliminar("#perfiles tbody",table); 
-    }
-       var obtener_data_edit = function (tbody, table) {
-        $(tbody).on("click","button.edit", function(){
-            var data = table.row($(this).parents("tr")).data();
-            var idusuario = $("#idusuario").val(data.idusuario),
-                nombres = $("#nombre").val(data.nombre),
-                apellidos = $("#apellido").val(data.apellido),
-                correo = $("#correo").val(data.correo),
-                correo = $("#contrasena").val(data.contrasena),
-                telefono = $("#telefono").val(data.telefono),
-                tipouser = $("#tipouser").val(data.tipouser);
-               
-        });
-       
-    }
-    var obtener_data_eliminar = function (tbody, table) {
-        $(tbody).on("click","button.eliminar", function(){
-            var data = table.row($(this).parents("tr")).data();
-            var idusuario = $("#idusuario").val(data.idusuario),
-                nombres = $("#nombre").val(data.nombre),
-                apellidos = $("#apellido").val(data.apellido),
-                correo = $("#correo").val(data.correo),
-                correo = $("#contrasena").val(data.contrasena),
-                telefono = $("#telefono").val(data.telefono),
-                tipouser = $("#tipouser").val(data.tipouser);
-                swal({
-                        title: "DESEAS ELIMINAR AL USUARIO?",
-                        text: "Al ELIMINARLO se quitara de la lista",
-                        type: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#DD6B55",
-                        confirmButtonText: "Si, ELIMINAR!",
-                        cancelButtonText: "No, CANCELAR!",
-                        closeOnConfirm: false,
-                        closeOnCancel: false },
-                    function (isConfirm) {
-                        if (isConfirm) {
-                            swal("ELIMINADO!", "Se elimino correctamente", "success");
-                        } else {
-                            swal("CANCELADO", "Usted a cancelado", "error");
-                        }
-                    });
+
+        listarEsc();
+
+    });
+    var listarEsc = function(){
+        var table = $("#escuela").DataTable({
+                destroy:true,
+                pageLength: 10,
+                responsive: true,
+                expandFirst: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                   
+                    {extend: 'excel', title: 'LISTA DE ESCUELAS'},
+                    {extend: 'pdf', title: 'LISTA DE ESCUELAS'},
+                 
+                ],
+
+            "ajax":{
+                "method":"POST",
+                "url":"../../Controlador/escuelaController.php"
+            },
+            "columns":[
                 
+                {"data":"Clave"},
+                {"data":"Escuela"},
+                {"data":"Domicilio"},
+                {"data":"Localidad22"},
+                {"data":"Municipio"},
+                {"data":"Ruta33"},
+                {"defaultContent": "<button class=' info btn btn-w-m btn-danger' data-toggle='modal' data-target='#myModal2'> Informacion</button>"},
+                {"data":"Eq","visible": false},
+                {"data":"Equip","visible": false},
+                {"data":"Reequip","visible": false},
+                {"data":"Conectividad","visible": false},
+                {"data":"Reporte","visible": false},
+                {"data":"NumRep","visible": false},
+                {"data":"Visita","visible": false},
+                {"data":"UltVisita","visible": false},
+                {"data":"FechaMant","visible": false},
+                {"data":"tipo_escuela","visible": false},
+                {"data":"concepto","visible": false},
+                {"data":"fecha","visible": false},
+                {"data":"levanto","visible": false},
+                {"data":"clavecct","visible": false},
+                {"data":"Status_Esc","visible": false}
+                
+
+               // {"defaultContent":"<button>Editar</button>"}
+            ]
+
+        });
+        obtener_data_info("#escuela tbody",table); 
+    }
+       var obtener_data_info = function (tbody, table) {
+        $(tbody).on("click","button.info", function(){
+            var data = table.row($(this).parents("tr")).data();
+            var 
+                Clave = $("#Clave").val(data.Clave),
+                Escuela = $("#Escuela").val(data.Escuela),
+                Domicilio = $("#Domicilio").val(data.Domicilio),
+                Localidad22 = $("#Localidad22").val(data.Localidad22),
+                Municipio = $("#Municipio").val(data.Municipio),
+                Ruta33 = $("#Ruta33").val(data.Ruta33),
+                Eq = $("#Eq").val(data.Eq),
+                Equip = $("#Equip").val(data.Equip),
+                Reequip= $("#Reequip").val(data.Reequip),
+                Conectividad = $("#Conectividad").val(data.Conectividad),
+                Reporte = $("#Reporte").val(data.Reporte),
+                NumRep = $("#NumRep").val(data.NumRep),
+                Visita = $("#Visita").val(data.Visita),
+                UltVisita = $("#UltVisita").val(data.UltVisita),
+                FechaMant = $("#FechaMant").val(data.FechaMant),
+                tipo_escuela = $("#tipo_escuela").val(data.tipo_escuela),
+                concepto = $("#concepto").val(data.concepto),
+                fecha = $("#fecha").val(data.fecha),
+                levanto = $("#levanto").val(data.levanto),
+                clavecct = $("#clavecct").val(data.clavecct),
+                Status_Esc = $("#Status_Esc").val(data.Status_Esc);
+
         });
        
     }
 
 </script>
-<!--Estructura del Modal-->
-<?php include '../Vista/modalPerfiles.php'; ?>
+<!--Estructura del ModalEscuelas-->
+<?php //include 'modalEscuelas.php'; ?>
 

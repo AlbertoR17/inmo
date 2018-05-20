@@ -7,5 +7,5 @@ $id=$_GET['id'];
 
 mysqli_query($con, "DELETE FROM usuario WHERE idusuario = $id");
 
-header("Location: ../Vista/usuarios.php");
+header("Location: ../Vista/Admin/usuarios.php");
 ?>

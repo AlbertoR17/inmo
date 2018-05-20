@@ -45,7 +45,7 @@ if ($tipouser === "Administrador") {
                 alert(mensaje);
                 </script>";
 
-        header("location: ../Vista/inicio.php");
+        header("location: ../Vista/Admin/inicio.php");
 
     } else {
         echo "
@@ -59,9 +59,9 @@ if ($tipouser === "Administrador") {
 }else if ($tipouser === "Recepcion") {
     if ($row["correo"] === $correo && $row["contrasena"] === $password) {
         session_start();
-         $_SESSION["nombres"]   = $nombres;
-         $_SESSION["apellidos"] = $apellidos;
-        $_SESSION["id_usuario"] = $id_usuario;
+         $_SESSION["nombre"]   = $nombre;
+         $_SESSION["apellido"] = $apellidos;
+        $_SESSION["idusuario"] = $id_usuario;
         $_SESSION["correo"] = $correo;
         $_SESSION["tipouser"] = $tipouser;
 
@@ -71,7 +71,7 @@ if ($tipouser === "Administrador") {
                 alert(mensaje);
                 </script>";
 
-        header("location: ../Vista/iniciorecepcion.php");
+        header("location: ../Vista/Recepcion/iniciorecepcion.php");
 
     } else {
         echo "
@@ -85,9 +85,9 @@ if ($tipouser === "Administrador") {
 }else if ($tipouser === "Venta") {
     if ($row["correo"] === $correo && $row["contrasena"] === $password) {
         session_start();
-         $_SESSION["nombres"]   = $nombres;
-         $_SESSION["apellidos"] = $apellidos;
-        $_SESSION["id_usuario"] = $id_usuario;
+         $_SESSION["nombre"]   = $nombre;
+         $_SESSION["apellido"] = $apellidos;
+        $_SESSION["idusuario"] = $id_usuario;
         $_SESSION["correo"] = $correo;
         $_SESSION["tipouser"] = $tipouser;
 
@@ -97,7 +97,7 @@ if ($tipouser === "Administrador") {
                 alert(mensaje);
                 </script>";
 
-        header("location: ../Vista/inicioventa.php");
+        header("location: ../Vista/Ventas/iniciorecepcion.php");
 
     } else {
         echo "
@@ -108,24 +108,7 @@ if ($tipouser === "Administrador") {
         header("location: ../Vista/login.php?error=1");
         exit();
     }
-}else if ($tipouser === "Renta") {
-    if ($row["correo"] === $correo && $row["contrasena"] === $password) {
-        session_start();
-         $_SESSION["nombres"]   = $nombres;
-         $_SESSION["apellidos"] = $apellidos;
-        $_SESSION["id_usuario"] = $id_usuario;
-        $_SESSION["correo"] = $correo;
-        $_SESSION["tipouser"] = $tipouser;
-
-        echo "
-                <script language='JavaScript'>
-                var mensaje = 'sesión iniciada';
-                alert(mensaje);
-                </script>";
-
-        header("location: ../Vista/iniciorenta.php");
-
-    } else {
+} else {
         echo "
                 <script type='text/javascript'>
                 alert('Usuario o contraseña incorrecto');
@@ -134,7 +117,7 @@ if ($tipouser === "Administrador") {
         header("location: ../Vista/login.php?error=1");
         exit();
     }
-}  
+
 
 
 

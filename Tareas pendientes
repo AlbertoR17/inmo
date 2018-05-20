@@ -1,0 +1,18 @@
+Tareas pendientes
+-Pre-registro (correo, nombre, asunto y dia de atencion y asesor al que va)
+-pantalla por agente de ventas de sus citas(listado con boton seleccion)
+-BTN seleccion manda llamar el registro para completarlo (BTN guardar y manda a catalogo)
+-seleccion del terreno se asocia al cliente y se da en siguiente
+-se desplega pantalla para mostrar datos del terreno y datos del cliente (se confirma y se manda a pantalla de pago)
+-en pantala de pago se enviaran los datos de pago al banco(aqui conexion con banco) se espera respuesta
+-se manda solicutd a gestoria legar y se espera respuesta se desplega el resultado (aqui conecion con Gestoria legal)y se da siguiente
+-se manda a gerente todos los datos y autoriza la venta 
+-pantalla de envio de datos a constructora(aqui coneccion con constructora)
+
+
+
+RESTRICIONES
+
+-cada agente de venta tiene sus clientes asiganados
+-el gerente tiene todas las opciones (administrador)
+-

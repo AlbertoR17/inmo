@@ -14,5 +14,5 @@ $q = ("UPDATE usuarios set nombres='$nombres',apellidos='$apellidos',telefono='$
 
 $ejecutar_q = mysqli_query($conexion, $q) or die("error al insertar");
 }
-header("location: ../Vista/usuarios.php");
+header("location: ../../Vista/Ventas/usuarios.php");
 echo "<br> Registro Insertado Correctamente! <br>";

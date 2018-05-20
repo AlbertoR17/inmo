@@ -13,9 +13,39 @@ session_start();
 
     <title>Inmobiliaria | Registro</title>
 
- 
+    <link href="../../Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-<?php include('css.php') ?>
+    <link href="../../Content/css/animate.css" rel="stylesheet">
+    <link href="../../Content/css/style.css" rel="stylesheet">
+    <link href="../../Content/css/plugins/dropzone/basic.css" rel="stylesheet">
+    <link href="../../Content/css/plugins/dropzone/dropzone.css" rel="stylesheet">
+    <link href="../../Content/css/plugins/jasny/jasny-bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/css/plugins/codemirror/codemirror.css" rel="stylesheet">
+    <link href="../../Content/css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+
+    <link href="../../Content/css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+<script>
+    function soloLetras(e){
+       key = e.keyCode || e.which;
+       tecla = String.fromCharCode(key).toLowerCase();
+       letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+       especiales = "8-37-39-46";
+
+       tecla_especial = false
+       for(var i in especiales){
+            if(key == especiales[i]){
+                tecla_especial = true;
+                break;
+            }
+        }
+
+        if(letras.indexOf(tecla)==-1 && !tecla_especial){
+            return false;
+        }
+    }
+</script>
+
 </head>
 
 <body >
@@ -27,7 +57,7 @@ session_start();
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="../Content/img/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="../../Content/img/profile_small.jpg" />
                         </span>
                          <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombre"]; ?>&nbsp;</strong>
                              </span> <span class="text-muted text-xs block" style="color: white;"><?php echo $_SESSION["tipouser"]; ?> </span> 
@@ -37,14 +67,14 @@ session_start();
                         Menú
                     </div>
                 </li>
-                <?php include('../Vista/Menu.php'); ?>
+                <?php include('../../Vista/Admin/Menu.php'); ?>
 
             </ul>
 
         </div>
     </nav>
 
-    <div id="page-wrapper" class="gray-bg" style="background-image: url('../Content/img/bg.jpg');">
+    <div id="page-wrapper" class="gray-bg" style="background-image: url('../../Content/img/bg.jpg');">
         <div class="row border-bottom">
             <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
@@ -55,7 +85,7 @@ session_start();
                     <script type="text/javascript">
                         function getTimeAJAX() {   
                             var time = $.ajax({
-                                url: '../Controlador/horaser.php', //indicamos la ruta donde se genera la hora
+                                url: '../../Controlador/horaser.php', //indicamos la ruta donde se genera la hora
                                 dataType: 'text',//indicamos que es de tipo texto plano
                                 async: false     //ponemos el parámetro asyn a falso
                             }).responseText;
@@ -70,7 +100,7 @@ session_start();
 
 
                     <li>
-                        <a href="../Controlador/Salir.php">
+                        <a href="../../Controlador/Salir.php">
                             <i class="fa fa-sign-out"></i> Salir
                         </a>
                     </li>
@@ -84,7 +114,7 @@ session_start();
         <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
                 <!-- Inicio de contenido --> 
-                <?php include('../Vista/cont_perfilcliente.php'); ?>
+                <?php include('../../Vista/Admin/cont_registrar.php'); ?>
                 <!-- Fin de contenido --> 
             </div>
         </div>
@@ -99,43 +129,32 @@ session_start();
 </div>
 
 
-<?php include('js.php') ?>
+
 <!-- Mainly scripts -->
-<script src="../Content/js/jquery-3.1.1.min.js"></script>
-<script src="../Content/js/bootstrap.min.js"></script>
-<script src="../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../Content/js/jquery-3.1.1.min.js"></script>
+<script src="../../Content/js/bootstrap.min.js"></script>
+<script src="../../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="../../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="../Content/js/inspinia.js"></script>
-<script src="../Content/js/plugins/pace/pace.min.js"></script>
+<script src="../../Content/js/inspinia.js"></script>
+<script src="../../Content/js/plugins/pace/pace.min.js"></script>
 
-<script src="../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
  <!-- Jasny -->
-    <script src="../Content/js/plugins/jasny/jasny-bootstrap.min.js"></script>
+    <script src="../../js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
     <!-- DROPZONE -->
-    <script src="../Content/js/plugins/dropzone/dropzone.js"></script>
+    <script src="../../js/plugins/dropzone/dropzone.js"></script>
 
     <!-- CodeMirror -->
-    <script src="../Content/js/plugins/codemirror/codemirror.js"></script>
-    <script src="../Content/js/plugins/codemirror/mode/xml/xml.js"></script>
+    <script src="../../js/plugins/codemirror/codemirror.js"></script>
+    <script src="../../js/plugins/codemirror/mode/xml/xml.js"></script>
     
-   <script src="../Content/js/plugins/datapicker/bootstrap-datepicker.js"></script>
+   <script src="../../js/plugins/datapicker/bootstrap-datepicker.js"></script>
 
-    <script src="../Content/js/plugins/daterangepicker/daterangepicker.js"></script>
-
-    <script src="../Content/js/plugins/footable/footable.all.min.js"></script>
- <script>
-        $(document).ready(function() {
-
-            $('.footable').footable();
-            $('.footable2').footable();
-
-        });
-
-    </script>
+    <script src="../../js/plugins/daterangepicker/daterangepicker.js"></script>
 </body>
 
 

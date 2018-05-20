@@ -42,7 +42,7 @@
           return patron.test(te); 
           }
       </script>
-               <form method="POST" action="../Controlador/regcliente.php" class="form-horizontal">
+               <form method="POST" action="../../Controlador/regcliente.php" class="form-horizontal">
                 <!-- NIVEL 1 -->
                 <div class="col-lg-12">
                   <!-- LIDER DE BRIGADA -->
@@ -81,7 +81,7 @@
                         <div class="col-sm-10"><select  name="tipotramite" id="tipouser" class="form-control chosen-container chosen-container-single"  required="" >
                                        <option value="0" disabled selected>Seleccion su tramite</option>
                                        <option value="Venta">Venta</option>
-                                       <option value="Renta">Renta</option>
+                                      
                                 
                                    </select>
                         </div>

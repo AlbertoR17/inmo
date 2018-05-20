@@ -1,5 +1,6 @@
 <?php 
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,24 +14,24 @@ session_start();
 
     <title>Inmobiliaria | Inicio</title>
 
-    <link href="../Content/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="../../Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-    <link href="../Content/css/animate.css" rel="stylesheet">
-    <link href="../Content/css/style.css" rel="stylesheet">
+    <link href="../../Content/css/animate.css" rel="stylesheet">
+    <link href="../../Content/css/style.css" rel="stylesheet">
 
 </head>
 
-<body>
+<body >
 
     <div id="wrapper">
 
-        <nav class="navbar-default navbar-static-side" role="navigation">
+        <nav class="navbar-default navbar-static-side" role="navigation" >
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
-                            <img alt="image" class="img-circle" src="../Content/img/profile_small.jpg" />
+                            <img alt="image" class="img-circle" src="../../Content/img/profile_small.jpg" />
                         </span>
   <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombre"]; ?>&nbsp;</strong>
                              </span> <span class="text-muted text-xs block" style="color: white;"><?php echo $_SESSION["tipouser"]; ?> </span> 
@@ -40,20 +41,28 @@ session_start();
                         Menú
                     </div>
                 </li>
-                <?php include('../Vista/Menu.php'); ?>
+                <?php //include('../Vista/Menu.php'); 
+
+                if ($_SESSION["tipouser"] === 'Recepcion') {
+                    include('../../Vista/Recepcion/Menurecepcion.php');
+                }else{
+                        echo "<script>alert('Inicie sesion');</script>";
+                        header("location: ../../Vista/login.php");
+                    }
+                ?>
 
             </ul>
 
         </div>
     </nav>
 
-    <div id="page-wrapper" class="gray-bg">
-        <div class="row border-bottom">
-            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-                <div class="navbar-header">
+    <div id="page-wrapper" class="gray-bg" style="background-image: url('../../Content/img/bg.jpg');">
+        <div class="row border-bottom" >
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0" >
+                <div class="navbar-header" >
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                    <form role="search" class="navbar-form-custom" action="http://webapplayers.com/inspinia_admin-v2.7.1/search_results.html">
-                <div class="form-group"><br>
+                    <form role="search" class="navbar-form-custom" >
+                <div class="form-group" ><br>
                     <span><h5><b>Inmobiliaria</b> Espacio a tu medida</h5></span>
                 </div>
             </form>
@@ -63,7 +72,7 @@ session_start();
                     <script type="text/javascript">
                         function getTimeAJAX() {   
                             var time = $.ajax({
-                                url: '../Controlador/horaser.php', //indicamos la ruta donde se genera la hora
+                                url: '../../Controlador/horaser.php', //indicamos la ruta donde se genera la hora
                                 dataType: 'text',//indicamos que es de tipo texto plano
                                 async: false     //ponemos el parámetro asyn a falso
                             }).responseText;
@@ -78,7 +87,7 @@ session_start();
 
 
                     <li>
-                        <a href="../Controlador/Salir.php">
+                        <a href="../../Controlador/Salir.php">
                             <i class="fa fa-sign-out"></i> Salir
                         </a>
                     </li>
@@ -89,13 +98,29 @@ session_start();
 
 
 
-        
-            <div class="row">
+        <div class="wrapper wrapper-content animated fadeInRight"  >
+            <div class="row" >
+                <div class="col-lg-12" >
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-content text-center p-md">
+
+                            <h1><b><span class="text-navy">Bienvenido</span></b></h1>
+
+                            <p>
+                                <h2><b> <?php echo $_SESSION["nombre"];  ?></b></h2>
+                            </p>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" >
                 <!-- Inicio de contenido --> 
-                <?php include('../Vista/editarusuariopant.php'); ?>
+                <?php //include('../Vista/Section/'); ?>
                 <!-- Fin de contenido --> 
             </div>
-       
+        </div>
         <div class="footer" >
             <div class="pull-right">
                Copyright <b>Inmobiliaria</b> &copy; <?php echo date('Y') ?>
@@ -109,16 +134,16 @@ session_start();
 
 
 <!-- Mainly scripts -->
-<script src="../Content/js/jquery-3.1.1.min.js"></script>
-<script src="../Content/js/bootstrap.min.js"></script>
-<script src="../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-<script src="../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../Content/js/jquery-3.1.1.min.js"></script>
+<script src="../../Content/js/bootstrap.min.js"></script>
+<script src="../../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="../../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 <!-- Custom and plugin javascript -->
-<script src="../Content/js/inspinia.js"></script>
-<script src="../Content/js/plugins/pace/pace.min.js"></script>
+<script src="../../Content/js/inspinia.js"></script>
+<script src="../../Content/js/plugins/pace/pace.min.js"></script>
 
-<script src="../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
 
 </body>
