@@ -80,7 +80,7 @@
                           echo "<td> ". $row['dimension'] . "</td>";  
                           echo "<td> ". $row['precio'] . "</td>";  
                           echo "<td> ". $row['descripcion'] . "</td>";  
-                          echo "<td> <a href='../Ventas/pago.php?id=".$row['idventa']."' class='btn btn-success'>Realizar pago</a> <a href='../../Controlador/eliminapreventa.php?id=".$row['idventa']."' class='btn btn-success'>Cancelar compra</a></td>";  
+                          echo "<td> <a href='../Admin/pagoadmin.php?id=".$row['idventa']."' class='btn btn-success'>Realizar pago</a> <a href='../../Controlador/eliminapreventaadmin.php?id=".$row['idventa']."' class='btn btn-success'>Cancelar compra</a></td>";  
                           echo "</tr>";  
 
                       }

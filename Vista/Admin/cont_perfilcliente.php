@@ -14,7 +14,7 @@
 
                                     <th data-toggle="true">Nombre</th>
                                     <th>Apellidos</th>
-                                    <th>Fecha de nacimiento</th>
+                                    <th data-hide="all">Fecha de nacimiento</th>
                                     <th data-hide="all">Domicilio</th>
                                     <th >Telefono</th>
                                     <th >Correo</th>
@@ -58,7 +58,7 @@
                    echo "<td>".$row['pais']."</td>";
                    echo "<td>".$row['estado']."</td>";
                    echo "<td>".$row['codpos']."</td>";
-                   echo "<td> <a href='' class='btn btn-success'>Seleccionar</a> </td>";
+                   echo "<td> <a href='../Admin/RegInfoClieadmin.php?id=".$row['idcliente']."' class='btn btn-success'>Seleccionar</a></td>";
 
                    /*echo "<td> <a href='../Controlador/hisPdf.php' target='_blank' class='btn btn-danger'>Imprimir</a></td>";
                                 echo "<td class='center'> <a href='../Controlador/eliVehiculo.php?id=".$row['num_vehiculo']."' class='btn btn-danger'>Eliminar</a>

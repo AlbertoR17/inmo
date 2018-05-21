@@ -1,5 +1,6 @@
- <?php 
+<?php 
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,25 +12,28 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Inmobiliaria | Registro</title>
+    <title>Inmobiliaria | Recepción</title>
 
- 
+    <link href="../../Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
 
-<?php include('css.php') ?>
+    <link href="../../Content/css/animate.css" rel="stylesheet">
+    <link href="../../Content/css/style.css" rel="stylesheet">
+
 </head>
 
 <body >
 
     <div id="wrapper">
 
-        <nav class="navbar-default navbar-static-side" role="navigation">
+        <nav class="navbar-default navbar-static-side" role="navigation" >
             <div class="sidebar-collapse">
                 <ul class="nav metismenu" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element"> <span>
                             <img alt="image" class="img-circle" src="../../Content/img/profile_small.jpg" />
                         </span>
-                         <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombre"]; ?>&nbsp;</strong>
+  <span class="clear" style="color: white;"> <span class="block m-t-xs"> <strong class="font-bold"><?php echo $_SESSION["nombre"]; ?>&nbsp;</strong>
                              </span> <span class="text-muted text-xs block" style="color: white;"><?php echo $_SESSION["tipouser"]; ?> </span> 
 
                     </div>
@@ -37,16 +41,15 @@ session_start();
                         Menú
                     </div>
                 </li>
-                <?php //include('../../Vista/Menu.php'); 
+                <?php //include('../Vista/Menu.php'); 
 
                 if ($_SESSION["tipouser"] === 'Administrador') {
-                  include('../../Vista/Admin/Menu.php');
-              }else{
-                session_destroy();
-                echo "<script>alert('Inicie sesion');</script>";
-                header("location: ../../Vista/login.php");
-            }
-            ?>
+                    include('../../Vista/Admin/Menu.php');
+                }else{
+                        echo "<script>alert('Inicie sesion');</script>";
+                        header("location: ../../Vista/login.php");
+                    }
+                ?>
 
             </ul>
 
@@ -54,10 +57,15 @@ session_start();
     </nav>
 
     <div id="page-wrapper" class="gray-bg" style="background-image: url('../../Content/img/bg.jpg');">
-        <div class="row border-bottom">
-            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
-                <div class="navbar-header">
+        <div class="row border-bottom" >
+            <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0" >
+                <div class="navbar-header" >
                     <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                    <form role="search" class="navbar-form-custom" >
+                <div class="form-group" ><br>
+                    <span><h5><b>Inmobiliaria</b> Espacio a tu medida</h5></span>
+                </div>
+            </form>
                 </div>
                 <ul class="nav navbar-top-links navbar-right">
                     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -90,10 +98,11 @@ session_start();
 
 
 
-        <div class="wrapper wrapper-content animated fadeInRight">
-            <div class="row">
+        <div class="wrapper wrapper-content animated fadeInRight"  >
+           
+            <div class="row" >
                 <!-- Inicio de contenido --> 
-                <?php include('../../Vista/Admin/cont_perfilcliente.php'); ?>
+                <?php include('../../Vista/Admin/cont_preregistroadmin.php'); ?>
                 <!-- Fin de contenido --> 
             </div>
         </div>
@@ -108,7 +117,7 @@ session_start();
 </div>
 
 
-<?php include('js.php') ?>
+
 <!-- Mainly scripts -->
 <script src="../../Content/js/jquery-3.1.1.min.js"></script>
 <script src="../../Content/js/bootstrap.min.js"></script>
@@ -121,30 +130,7 @@ session_start();
 
 <script src="../../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
- <!-- Jasny -->
-    <script src="../../Content/js/plugins/jasny/jasny-bootstrap.min.js"></script>
 
-    <!-- DROPZONE -->
-    <script src="../../Content/js/plugins/dropzone/dropzone.js"></script>
-
-    <!-- CodeMirror -->
-    <script src="../../Content/js/plugins/codemirror/codemirror.js"></script>
-    <script src="../../Content/js/plugins/codemirror/mode/xml/xml.js"></script>
-    
-   <script src="../../Content/js/plugins/datapicker/bootstrap-datepicker.js"></script>
-
-    <script src="../../Content/js/plugins/daterangepicker/daterangepicker.js"></script>
-
-    <script src="../../Content/js/plugins/footable/footable.all.min.js"></script>
- <script>
-        $(document).ready(function() {
-
-            $('.footable').footable();
-            $('.footable2').footable();
-
-        });
-
-    </script>
 </body>
 
 
