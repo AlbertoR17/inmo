@@ -36,7 +36,7 @@
                                 <tbody>
                                       <?php
                  require('../../Controlador/conec.php');
-                 $rs = mysqli_query($con, "SELECT * FROM cliente");
+                 $rs = mysqli_query($con, "SELECT * FROM cliente where statuscli=0");
                  while($row=mysqli_fetch_array($rs))
                  {
                     

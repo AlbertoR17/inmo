@@ -1,7 +1,7 @@
                     <?php
                     $iduser=$_SESSION["idusuario"];
                     require('../../Controlador/conec.php');
-                    $rs = mysqli_query($con, "SELECT * FROM terrenos");
+                    $rs = mysqli_query($con, "SELECT * FROM terrenos where status =0");
                     echo "<div class='wrapper wrapper-content animated fadeInRight'>
                     <div class='row'>";
                     while($row = mysqli_fetch_array($rs)){

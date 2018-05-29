@@ -15,15 +15,17 @@
 <li>
 	<a href="../../Vista/Admin/perfilcliente.php"><i class="fa fa-user"></i> <span class="nav-label">Clientes</span></span></a>
 </li>
-
 <li>
-	<a href="../../Vista/Admin/catalogoadmin.php"><i class="fa fa-list-alt"></i> <span class="nav-label">Catalogo</span></span></a>
+	<a href="../../Vista/Admin/registraterreno.php"><i class="fa fa-user"></i> <span class="nav-label">Registra terrenos</span></span></a>
 </li>
 <li>
-	<a href="../../Vista/Admin/clientelistopagoadmin.php"><i class="fa fa-list-alt"></i> <span class="nav-label">Clientes pendiente de pago</span></span></a>
+	<a href="../../Vista/Admin/catalogoadmin2.php"><i class="fa fa-list-alt"></i> <span class="nav-label">Catalogo</span></span></a>
 </li>
 <li>
-	<a href=""><i class="fa fa-list-alt"></i> <span class="nav-label">Ventas</span></span></a>
+	<a href="../../Vista/Admin/clientelistopagoadmin.php"><i class="fa fa-check-square-o"></i> <span class="nav-label">Autorización de ventas</span></span></a>
+</li>
+<li>
+	<a href="../../Vista/Admin/finalizaradmin.php"><i class="fa fa-list-ul"></i> <span class="nav-label">Ventas finalizadas</span></span></a>
 </li>
 <li>
 	<a href=""><i class="fa fa-files-o"></i> <span class="nav-label">Facturación</span></span></a>

@@ -8,10 +8,13 @@
 	<a href="../../Vista/Ventas/perfilcliente.php"><i class="fa fa-user"></i> <span class="nav-label">Perfil de cliente</span></span></a>
 </li> -->
 <li>
-	<a href="../../Vista/Ventas/catalogo.php"><i class="fa fa-th"></i> <span class="nav-label">Catalogo</span></span></a>
+	<a href="../../Vista/Ventas/catalogo2.php"><i class="fa fa-th"></i> <span class="nav-label">Catalogo</span></span></a>
 </li>
 <li>
 	<a href="../../Vista/Ventas/clientelistopago.php"><i class="fa fa-list-alt"></i> <span class="nav-label">Clientes pendientes de pago</span></span></a>
+</li>
+<li>
+	<a href="../../Vista/Ventas/finalizar.php"><i class="fa fa-files-o"></i> <span class="nav-label">Ventas realizadas</span></span></a>
 </li>
 <li>
 	<a href=""><i class="fa fa-files-o"></i> <span class="nav-label">Facturación</span></span></a>

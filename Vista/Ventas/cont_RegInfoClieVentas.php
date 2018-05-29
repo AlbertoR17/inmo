@@ -51,7 +51,7 @@
       <div class="col-lg-6">
         
           <div class="form-group">
-            <input value="<?php echo $idcliente ?>" required name="idc"  type="text" class="form-control">
+            <input value="<?php echo $idcliente ?>" required name="idc"  type="hidden" class="form-control">
           </div>
           <div class="form-group"><label class="col-sm-2 control-label">Nombre(s)</label>
             <div class="col-sm-10"><input  value="<?php echo $nombres ?>" required placeholder="" name="nombre"   type="text" class="form-control"></div>
@@ -77,6 +77,23 @@
           </div>
       </div>
  </fieldset>
+ <script type="text/javascript">
+    function showContent() {
+        element = document.getElementById("content");
+        check = document.getElementById("check");
+        if (check.checked) {
+            element.style.display='block';
+        }
+        else {
+            element.style.display='none';
+        }
+    }
+</script>
+<center>  
+<b>¿Ocupará factura?</b>
+<input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
+</center>
+<div id="content" style="display: none;">
    <div class="col-lg-12">
     <fieldset>
     <legend>Datos fiscales</legend>
@@ -121,6 +138,7 @@
     </div>
   </fieldset>
   </div>
+   </div>
                   <!-- <div class="col-lg-6">
                     <fieldset>
                       <legend>Archivos Digitales</legend>

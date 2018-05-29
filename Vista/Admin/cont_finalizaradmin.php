@@ -3,7 +3,7 @@
         <div class="col-lg-60">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                <h3>Clientes asignados</h3>
+                <h3>Ventas realizadas</h3>
                 </div>
         <div class="ibox-content">
 
@@ -27,7 +27,7 @@
                        <?php
                        $iduser=$_SESSION["idusuario"];
                        require('../../Controlador/conec.php');
-                       $rs = mysqli_query($con, "SELECT * FROM cliente where asignadoa ='$iduser' and statuscli=0");
+                       $rs = mysqli_query($con, "SELECT * FROM preventa where pagoconfirmado=1");
 
                        while($row = mysqli_fetch_array($rs)){
 
@@ -36,7 +36,7 @@
                           echo "<td> ". $row['apellidos'] . "</td>";
                           echo "<td> ". $row['correoper'] . "</td>"; 
                           echo "<td> ". $row['telefonoper'] . "</td>"; 
-                          echo "<td> <a href='../Ventas/RegInfoClieVentas.php?id=".$row['idcliente']."' class='btn btn-success'>Seleccionar</a> </td>";  
+                          //echo "<td> <a href='../Ventas/.php?id=".$row['idcliente']."' class='btn btn-success'>Seleccionar</a> </td>";  
                           echo "</tr>";   
                       }
 

@@ -51,6 +51,19 @@ $q= "INSERT INTO preventa(  idventa,idcliente,nombres,apellidos,fenac,domiciliop
 				  			'$precio','$descripcion','$status')";
 $ejecuta_q= mysqli_query($con,$q) or die("error al insertar");
 
+$qs="UPDATE cliente 
+	 SET statuscli = 1 
+	 WHERE idcliente='$idclie'";	
+
+$ejecuta_q2= mysqli_query($con,$qs) or die("error al cambiar el status");
+
+
+$qss="UPDATE terrenos 
+	 SET status = 1 
+	 WHERE idterreno='$idter'";	
+
+$ejecuta_q3= mysqli_query($con,$qss) or die("error al insertar");
+
 mysqli_close($con);
 header('Location: ../Vista/Ventas/clientelistopago.php');
 

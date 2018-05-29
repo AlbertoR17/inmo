@@ -51,6 +51,7 @@ $qs="UPDATE cliente
 		 pais ='$varpais' ,
 		 estado ='$varedo' ,
 		 codpos ='$varcodpos' 
+		 
 	 WHERE idcliente='$idc'";	
 /*	 
 $q= "INSERT INTO cliente (

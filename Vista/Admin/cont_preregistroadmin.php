@@ -8,17 +8,17 @@
         <div class="ibox-content">
           <form  method="POST" action="../../Modelo/RegistroClienteadmin.php" class="form-group">
             <div class="form-group">
-              <label>Nombre(s)</label><input required type="text" name="nombres" placeholder="Nombre(s)" class="form-control
+              <label>Nombre(s)</label><input required type="text" name="nombres" onkeypress="return validaletra(event)" placeholder="Nombre(s)" class="form-control
               " pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
             </div>
             <div class="form-group">
-              <label>Apellido(s)</label><input required type="text" name="apellidos" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
+              <label>Apellido(s)</label><input required type="text" name="apellidos" onkeypress="return validaletra(event)" placeholder="Apellido(s)" class="form-control" pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="">
             </div>
             <div class="form-group">
-              <label>Correo</label><input required type="email" name="correo" placeholder="Correo" class="form-control" pattern="^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required="">
+              <label>Correo</label><input required type="email" onkeypress="return validacorreo(event)" name="correo" placeholder="Correo" class="form-control" pattern="^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required="">
             </div>
             <div class="form-group">
-              <label>Telefono</label><input required type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
+              <label>Telefono</label><input required type="number" onkeypress="return validanum(event)" name="telefono"  placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
             </div>
             <div class="form-group">
               <label>Asignado a: </label> 
@@ -45,3 +45,40 @@
    </div>
  </div>
 </div>
+ <script type="text/javascript">
+
+
+       function validanum(e){
+        tecla = (document.all) ? e.keyCode : e.which;
+
+        if (tecla==8){
+          return true;
+        }
+
+        patron =/[0-9]/;
+        tecla_final = String.fromCharCode(tecla);
+        return patron.test(tecla_final);
+      }
+    </script>
+    <script type="text/javascript">
+     function validacorreo(e) { 
+      tecla = (document.all) ? e.keyCode : e.which; 
+      if (tecla==8) return true; 
+      patron =/^\w+([\.\+\-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail); 
+      te = String.fromCharCode(tecla); 
+      return patron.test(te); 
+    }
+    function isValidEmail(mail) {  
+      return /^\w+([\.\+\-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test(mail); 
+    }
+
+  </script>
+  <script type="text/javascript">
+    function validaletra(e) { 
+      tecla = (document.all) ? e.keyCode : e.which; 
+      if (tecla==8) return true; 
+      patron =/[A-Za-z\s]/; 
+      te = String.fromCharCode(tecla); 
+      return patron.test(te); 
+    }
+  </script>

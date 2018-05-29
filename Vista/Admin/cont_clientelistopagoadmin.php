@@ -50,7 +50,7 @@
                        <?php
                        $iduser=$_SESSION["idusuario"];
                        require('../../Controlador/conec.php');
-                       $rs = mysqli_query($con, "SELECT * FROM preventa");
+                       $rs = mysqli_query($con, "SELECT * FROM preventa where autorizado=0");
 
                        while($row = mysqli_fetch_array($rs)){
 
@@ -80,7 +80,7 @@
                           echo "<td> ". $row['dimension'] . "</td>";  
                           echo "<td> ". $row['precio'] . "</td>";  
                           echo "<td> ". $row['descripcion'] . "</td>";  
-                          echo "<td> <a href='../Admin/pagoadmin.php?id=".$row['idventa']."' class='btn btn-success'>Realizar pago</a> <a href='../../Controlador/eliminapreventaadmin.php?id=".$row['idventa']."' class='btn btn-success'>Cancelar compra</a></td>";  
+                          echo "<td><a href='../../Controlador/autorizacion.php?id=".$row['idventa']."' class='btn btn-success'>Autorizar</a>  <a href='../../Controlador/eliminapreventaadmin.php?id=".$row['idventa']."' class='btn btn-success'>Cancelar compra</a></td>";  
                           echo "</tr>";  
 
                       }
@@ -88,6 +88,7 @@
                       mysqli_close($con);
                       ?>   
                   </tbody>
+                   <!-- <button id='tramites' data-toggle='modal' data-target='#myModal' class='btn btn-success'>Tramites legales</button> -->
                   <tfoot>
                    <tr>
                     <th>Nombre(s)</th>

@@ -1,7 +1,7 @@
                     <?php
                     $iduser=$_SESSION["idusuario"];
                     require('../../Controlador/conec.php');
-                    $rs = mysqli_query($con, "SELECT * FROM terrenos where status =0");
+                    $rs = mysqli_query($con, "SELECT * FROM terrenos where status=0");
                     echo "<div class='wrapper wrapper-content animated fadeInRight'>
                     <div class='row'>";
                     while($row = mysqli_fetch_array($rs)){
@@ -9,6 +9,7 @@
 
                      $idterreno=$row['idterreno']; 
                      $codterreno=$row['codterreno'];
+                     $tipo=$row['tipo'];
                      $zona=$row['zona'];  
                      $domicilio=$row['domicilio']; 
                      $codpostal=$row['codpostal'];
@@ -30,8 +31,8 @@
                      <img  style='width: 100%; height: 100%;' src='../../Content/img/terrenos/".$codterreno.".jpg' alt='>
                      </div>
                      <div class='product-desc'>
-                     
-                     <span ><span style='color:black;'>Zona: </span>".$zona."</span>
+                     <span ><span style='color:black;'>Zona: ".$zona." </span></span>
+                     <span ><span style='color:black;'>Tipo: ".$tipo." </span></span>
                      <a href='#' class='product-name'> ".$codterreno."</a>
                      <small class='text-muted'>Zona: ".$descripcion."</small>
 
@@ -57,7 +58,7 @@
                      
                      </div>
                      <div class='m-t text-righ'>
-                     <a href='../../Controlador/seleccionaterrenoadmin.php?idc=".$aidi."&idt=".$idterreno."' class='btn btn-success btn-sm'> Seleccionar </a>
+                     <a href='../../Controlador/elimniaterreno.php?idt=".$idterreno."' class='btn btn-success btn-sm'> Elimina </a>
                      </div>
                      </div>
                      </div>

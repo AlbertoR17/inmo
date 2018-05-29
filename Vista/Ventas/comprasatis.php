@@ -1,13 +1,13 @@
 <?php 
 session_start();
-$aidi=$_GET['id'];
+//$aidi=$_GET['id'];
 
 $iduser=$_SESSION["idusuario"];
 require('../../Controlador/conec.php');
 $rs = mysqli_query($con, "SELECT * FROM preventa");
 
 $row = mysqli_fetch_array($rs);
-$_SESSION['idv']=$aidi;
+
 $idventa=$row['idventa'];
 $producto=$row['codterreno'];
 $precio=$row['precio'];
@@ -46,8 +46,7 @@ mysqli_close($con);
     
     <link href="../../Content/css/animate.css" rel="stylesheet">
     <link href="../../Content/css/style.css" rel="stylesheet">
-    <link href="../../Content/css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 </head>
 
@@ -132,7 +131,7 @@ mysqli_close($con);
 
             <div class="row" >
                 <!-- Inicio de contenido --> 
-                <?php include('../../Vista/Ventas/cont_pago.php'); ?>
+                <?php include('../../Vista/Ventas/cont_comprasatis.php'); ?>
                 <!-- Fin de contenido --> 
 
 
@@ -152,7 +151,6 @@ mysqli_close($con);
 
 
 <!-- Mainly scripts -->
-<?PHP //include "js_pago.php";?>
 <script src="../../Content/js/jquery-3.1.1.min.js"></script>
 <script src="../../Content/js/bootstrap.min.js"></script>
 <script src="../../Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
@@ -258,66 +256,6 @@ function toSingle(digit){
         return digit;
     }
 }
-</script>
-
-    <script src="../../Content/js/plugins/sweetalert/sweetalert.min.js"></script>
-
-<script>
-
-    $(document).ready(function () {
-
-        $('.demo1').click(function(){
-            swal({
-                title: "Welcome in Alerts",
-                text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-            });
-        });
-
-        $('.demo2').click(function(){
-            swal({
-                title: "Good job!",
-                text: "You clicked the button!",
-                type: "success"
-            });
-        });
-
-        $('.demo3').click(function () {
-            swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this imaginary file!",
-                type: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes, delete it!",
-                closeOnConfirm: false
-            }, function () {
-                swal("Deleted!", "Your imaginary file has been deleted.", "success");
-            });
-        });
-
-        $('.demo4').click(function () {
-            swal({
-                        title: "Are you sure?",
-                        text: "Your will not be able to recover this imaginary file!",
-                        type: "warning",
-                        showCancelButton: true,
-                        confirmButtonColor: "#DD6B55",
-                        confirmButtonText: "Yes, delete it!",
-                        cancelButtonText: "No, cancel plx!",
-                        closeOnConfirm: false,
-                        closeOnCancel: false },
-                    function (isConfirm) {
-                        if (isConfirm) {
-                            swal("Deleted!", "Your imaginary file has been deleted.", "success");
-                        } else {
-                            swal("Cancelled", "Your imaginary file is safe :)", "error");
-                        }
-                    });
-        });
-
-
-    });
-
 </script>
 
 

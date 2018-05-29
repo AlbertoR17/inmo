@@ -1,6 +1,6 @@
 <div class="wrapper wrapper-content animated ">
     <div class="row">
-        <div class="col-lg-60">
+        <div class="col-lg-12">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                 <h3>Clientes listos para realizar el pago</h3>
@@ -50,7 +50,7 @@
                        <?php
                        $iduser=$_SESSION["idusuario"];
                        require('../../Controlador/conec.php');
-                       $rs = mysqli_query($con, "SELECT * FROM preventa");
+                       $rs = mysqli_query($con, "SELECT * FROM preventa where (autorizado=1) and (pagoconfirmado=0)");
 
                        while($row = mysqli_fetch_array($rs)){
 
@@ -80,7 +80,7 @@
                           echo "<td> ". $row['dimension'] . "</td>";  
                           echo "<td> ". $row['precio'] . "</td>";  
                           echo "<td> ". $row['descripcion'] . "</td>";  
-                          echo "<td> <a href='../Ventas/pago.php?id=".$row['idventa']."' class='btn btn-success'>Realizar pago</a> <a href='../../Controlador/eliminapreventa.php?id=".$row['idventa']."' class='btn btn-success'>Cancelar compra</a></td>";  
+                          echo "<td> <a id='ancla' href='../Ventas/pago.php?id=".$row['idventa']."' class='btn btn-success'>Realizar pago</a> <a href='../../Controlador/eliminapreventa.php?id=".$row['idventa']."' class='btn btn-success'>Cancelar compra</a></td>";  
                           echo "</tr>";  
 
                       }
@@ -88,6 +88,7 @@
                       mysqli_close($con);
                       ?>   
                   </tbody>
+                  <!-- <button id='tramites' data-toggle='modal' data-target='#myModal' class='btn btn-success'>Tramites legales</button> -->
                   <tfoot>
                    <tr>
                     <th>Nombre(s)</th>
@@ -100,6 +101,28 @@
             </tfoot> 
         </table>
     </div>
+    <div class="modal " id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style="color:red;"><span class="glyphicon glyphicon-lock"></span> Tramite con gestoria legal</h4>
+        </div>
+        <div class="modal-body">
+          <center>
+            <h5>Simulación de respuesta</h5>
+            <button data-dismiss="modal"  class='btn btn-success'>OK !! </button>
+          </center>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-default btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cerrar</button>
+
+        </div>
+      </div>
+    </div>
+  </div> 
     
                    <!-- <a class='btn btn-success' href='#edit".$row['idusuario']." data-toggle='modal'>Editar </a> -->
         
