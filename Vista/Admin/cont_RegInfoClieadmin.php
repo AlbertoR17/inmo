@@ -102,16 +102,16 @@
     <legend>Datos fiscales</legend>
     <div class="col-lg-6"> 
         <div class="form-group"><label class="col-sm-2 control-label">Nombre o razón social</label>
-          <div class="col-sm-10"><input placeholder="" name="rasocial" type="text" class="form-control"></div>
+          <div class="col-sm-10"><input placeholder="" name="rasocial" type="text"  class="form-control"></div>
         </div>
         <div class="form-group"><label class="col-sm-2 control-label">RFC</label>
           <div class="col-sm-10"><input placeholder="" name="rfc" type="text" class="form-control"></div>
         </div>
         <div class="form-group"><label class="col-sm-2 control-label">Calle</label>
-          <div class="col-sm-10"><input placeholder="" name="calle" type="text" class="form-control"></div>
+          <div class="col-sm-10"><input placeholder="" name="calle" type="text" onkeypress="return validaletra(event)" class="form-control"></div>
         </div>
         <div class="form-group"><label class="col-sm-2 control-label">Numero</label>
-          <div class="col-sm-10"><input type="text" name="numero" class="form-control"></div>
+          <div class="col-sm-10"><input type="text" onkeypress="return validanum(event)" name="numero" class="form-control"></div>
         </div>
         <div class="form-group"><label class="col-sm-2 control-label">Colonia</label>
           <div class="col-sm-10"><input type="text" name="colonia" class="form-control"></div>
@@ -126,16 +126,16 @@
           <div class="col-sm-10"><input type="text" name="referencia" placeholder="" class="form-control"></div>
         </div>
         <div class="form-group"><label class="col-sm-2 control-label">Municipio</label>
-          <div class="col-sm-10"><input type="text" name="municipio" placeholder="" class="form-control"></div>
+          <div class="col-sm-10"><input type="text" name="municipio" placeholder="" onkeypress="return validanum(event)" class="form-control"></div>
         </div>
         <div class="form-group"><label class="col-sm-2 control-label">Pais</label>
-          <div class="col-sm-10"><input type="text" name="pais" placeholder="" class="form-control"></div>
+          <div class="col-sm-10"><input type="text" onkeypress="return validaletra(event)" name="pais" placeholder="" class="form-control"></div>
         </div>
         <div class="form-group"><label class="col-sm-2 control-label">Estado</label>
-          <div class="col-sm-10"><input type="text" name="edo" placeholder="" class="form-control"></div>
+          <div class="col-sm-10"><input type="text" onkeypress="return validaletra(event)" name="edo" placeholder="" class="form-control"></div>
         </div>
-        <div class="form-group"><label class="col-sm-2  control-label" onkeypress="return validanum(event)">Codigo postal</label>
-          <div class="col-sm-10"><input type="text" name="codpos" placeholder="" class="form-control"></div>
+        <div class="form-group"><label class="col-sm-2  control-label">Codigo postal</label>
+          <div class="col-sm-10"><input type="text"  onkeypress="return validanum(event)" name="codpos" placeholder="" class="form-control"></div>
         </div>
       
     </div>

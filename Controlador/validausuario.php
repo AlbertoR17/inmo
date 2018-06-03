@@ -1,6 +1,5 @@
 
 <?php
-session_start();
 unset($_SESSION["nombre"]);
 $correo = trim($_POST['correo']);
 $password = trim($_POST['contrasena']);
@@ -8,7 +7,7 @@ $password = trim($_POST['contrasena']);
 
 
 if (empty($correo) || empty($password)) {
-    header("location: ../Vista/login.php");
+    header("location: ../Vista/Login.php");
     echo "";
     exit();
 
@@ -20,7 +19,7 @@ $query  = "SELECT * FROM usuario WHERE correo = '$correo' AND contrasena = '$pas
 $result = mysqli_query($con, $query);
 $row    = mysqli_fetch_assoc($result);
 if (!isset($row)) {
-    header("location: ../Vista/login.php");
+    header("location: ../Vista/Login.php");
 }
 
  $nombre   = $row["nombre"];
@@ -53,7 +52,7 @@ if ($tipouser === "Administrador") {
                 alert('Usuario o contraseña incorrecto');
                 </script>";
 
-        header("location: ../Vista/login.php?error=1");
+        header("location: ../Vista/Login.php?error=1");
         exit();
     }
 }else if ($tipouser === "Recepcion") {
@@ -79,7 +78,7 @@ if ($tipouser === "Administrador") {
                 alert('Usuario o contraseña incorrecto');
                 </script>";
 
-        header("location: ../Vista/login.php?error=1");
+        header("location: ../Vista/Login.php?error=1");
         exit();
     }
 }else if ($tipouser === "Venta") {
@@ -105,7 +104,7 @@ if ($tipouser === "Administrador") {
                 alert('Usuario o contraseña incorrecto');
                 </script>";
 
-        header("location: ../Vista/login.php?error=1");
+        header("location: ../Vista/Login.php?error=1");
         exit();
     }
 } else {
@@ -114,7 +113,7 @@ if ($tipouser === "Administrador") {
                 alert('Usuario o contraseña incorrecto');
                 </script>";
 
-        header("location: ../Vista/login.php?error=1");
+        header("location: ../Vista/Login.php?error=1");
         exit();
     }
 

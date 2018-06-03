@@ -19,7 +19,7 @@
                             <th>Email</th>
                             <th>Telefono</th>
                             
-                            <!-- <th>Acción</th> -->
+                           <th>Acción</th> 
 
                         </tr>
                     </thead>
@@ -32,11 +32,18 @@
                        while($row = mysqli_fetch_array($rs)){
 
                           echo "<tr'>";  
+                          echo "<td hidden>" . $row['idventa'] .  "</td>";
                           echo "<td>" . $row['nombres'] .  "</td>";
                           echo "<td> ". $row['apellidos'] . "</td>";
                           echo "<td> ". $row['correoper'] . "</td>"; 
                           echo "<td> ". $row['telefonoper'] . "</td>"; 
-                          //echo "<td> <a href='../Ventas/.php?id=".$row['idcliente']."' class='btn btn-success'>Seleccionar</a> </td>";  
+                          echo "<td> 
+                                  <a href='../Admin/envicon.php?id=".$row['idcliente']."' class='btn btn-success'>Enviar</a> 
+                                  <form action='../../Controlador/compago.php' method='POST' >
+                                    <input type='hidden'   name='idc'  value='".$row['idventa']."' >
+                                    <button type='submit' class='btn btn-success'>Comprobante de pago </button>
+                                  </form> 
+                                </td>";  
                           echo "</tr>";   
                       }
 
@@ -50,13 +57,15 @@
                     <th>Email</th>
                     <th>Telefono</th>
                     
-                    <!-- <th>Acción</th> -->
+                    <th>Acción</th>
                 </tr>
             </tfoot> 
         </table>
     </div>
     
                    <!-- <a class='btn btn-success' href='#edit".$row['idusuario']." data-toggle='modal'>Editar </a> -->
+
+
         
 
 </div>

@@ -4,7 +4,7 @@
 $(document).ready(function(){
 
   $("#payform").submit(function(){
-
+    var titu=$("#titular").val();
     var datospago={destino:$("#destino").val(),
                    precio:$("#precio").val(),
                    nutar:$("#nutar").val(),
@@ -26,9 +26,10 @@ $(document).ready(function(){
 
       $("#contenido_externo").html("<br><div><p class='font-bold  alert alert-success m-b-sm'>Transacción exitosa</p> <br> <a href='casifinalizar.php' class='btn btn-success'>Finalizar</a><div>");
     
-      document.getElementById("payform").style.display = "none";
-      document.getElementById("detallecompra").style.display = "none";
-
+       document.getElementById("payform").style.display = "none";
+       document.getElementById("detallecompra").style.display = "none";
+      //$.post("casifinalizar.php",datospago,procesadatos);
+                     
 
     }
     else{
@@ -40,10 +41,25 @@ $(document).ready(function(){
     var msgerror="Oops a ocurrido un error, intentalo más tarde";
     $("#contenido_externo").html("<br><div><p class='font-bold  alert alert-success m-b-sm'>"+msgerror+"</p> <br><div>");
   }
+  function guardar(){
+    $.post("rebd.php",datospago);
+  }
 
 });
 
 </script>
+<?php 
+                        date_default_timezone_set('America/Hermosillo'); 
+                        $_SESSION['fechin']=date('Y-m-d'); //fecha, fecha de cobro
+                        $_SESSION['horin']=date('h:i:s A',time()); //hora/ 
+                        $_SESSION['nutars']="<script> $('#nutar').val(); </script>";
+                        $_SESSION['destinok']="1234567890123456";
+                        $_SESSION['preciot']=$precio;
+                        $_SESSION['nombrex']="<script>document.write(titu)</script>";
+                        $_SESSION['aidiventa']=$idventa;
+                         ?>
+
+
 <div class="panel-group payments-method" >  
     <div class="panel panel-default">
         <div class="panel-heading">
@@ -70,6 +86,7 @@ $(document).ready(function(){
                         <strong>Municipio:</strong> <?php echo $municipio ?> <br/>
                         <strong>Localidad:</strong> <?php echo $localidad ?> <br/>
                         <strong>Dirección:</strong> <?php echo $domicilio ?> <br/>
+
                         
                     </div>
                     <div class="col-md-8">

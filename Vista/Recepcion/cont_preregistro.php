@@ -18,7 +18,7 @@
               <label>Correo</label><input required type="email" name="correo" placeholder="Correo" class="form-control" pattern="^[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required="">
             </div>
             <div class="form-group">
-              <label>Telefono</label><input required type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$" maxlength="10"  title="Formato 662-0000000" required="">
+              <label>Telefono</label><input required type="text" name="telefono" placeholder="Telefono" class="form-control" pattern="^(\d{10})$"  maxlength="10"  title="Formato 662-0000000" required="">
             </div>
             <div class="form-group">
               <label>Asignado a: </label> 

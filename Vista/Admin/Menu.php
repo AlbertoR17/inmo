@@ -27,6 +27,6 @@
 <li>
 	<a href="../../Vista/Admin/finalizaradmin.php"><i class="fa fa-list-ul"></i> <span class="nav-label">Ventas finalizadas</span></span></a>
 </li>
-<li>
+<!-- <li>
 	<a href=""><i class="fa fa-files-o"></i> <span class="nav-label">Facturación</span></span></a>
-</li>
+</li> -->

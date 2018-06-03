@@ -16,6 +16,6 @@
 <li>
 	<a href="../../Vista/Ventas/finalizar.php"><i class="fa fa-files-o"></i> <span class="nav-label">Ventas realizadas</span></span></a>
 </li>
-<li>
+<!-- <li>
 	<a href=""><i class="fa fa-files-o"></i> <span class="nav-label">Facturación</span></span></a>
-</li>
+</li> -->

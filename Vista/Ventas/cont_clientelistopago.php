@@ -50,7 +50,8 @@
                        <?php
                        $iduser=$_SESSION["idusuario"];
                        require('../../Controlador/conec.php');
-                       $rs = mysqli_query($con, "SELECT * FROM preventa where (autorizado=1) and (pagoconfirmado=0)");
+                       $rs = mysqli_query($con, "SELECT * FROM preventa where (autorizado=1) and (pagoconfirmado=0)
+                        and (asignadoa='$iduser')");
 
                        while($row = mysqli_fetch_array($rs)){
 

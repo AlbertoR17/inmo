@@ -36,8 +36,13 @@
                           echo "<td> ". $row['apellidos'] . "</td>";
                           echo "<td> ". $row['correoper'] . "</td>"; 
                           echo "<td> ". $row['telefonoper'] . "</td>"; 
-                          //echo "<td> <a href='../Ventas/.php?id=".$row['idcliente']."' class='btn btn-success'>Seleccionar</a> </td>";  
-                          echo "</tr>";   
+                          echo "<td> 
+                                  <form action='../../Controlador/compago.php' method='POST' >
+                                    <input type='hidden'   name='idc'  value='".$row['idventa']."' >
+                                    <button type='submit' class='btn btn-success'>Comprobante de pago </button>
+                                  </form> 
+                                </td>";  
+                          echo "</tr>";  
                       }
 
                       mysqli_close($con);

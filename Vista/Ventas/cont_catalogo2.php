@@ -56,7 +56,7 @@
                     <br>
                      
                      </div>
-                     <a href='../../Controlador/seleccionaterreno.php?idc=".$aidi."&idt=".$idterreno."' class='btn btn-success btn-sm'> Seleccionar </a>
+                     
                      </div>
                      </div>
                      </div>
