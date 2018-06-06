@@ -21,9 +21,9 @@ $q= "INSERT INTO pruebaenvicliente (  idenvi,nombre,correo,telefono,tipo,ciudad,
 				  			'$ciudad','$direccion','$dimension')";
 $ejecuta_q= mysqli_query($con,$q) or die("error al insertar");
 
-mysqli_close($con);
 
-	if ($ejecuta_q) 
+
+	/*if ($ejecuta_q) 
 	{
 		echo "true";
 		
@@ -32,7 +32,8 @@ mysqli_close($con);
 	{
 		echo "false";
 	}
-
-
-header("Location: ../../Vista/Admin/finalizaradmin.php");
+*/
+mysqli_close($con);
+header("Location: ../../Vista/Admin/enviado.php");
+//header("Location: IP:8080/inmo/Vista/Admin/enviado.php");
  ?>

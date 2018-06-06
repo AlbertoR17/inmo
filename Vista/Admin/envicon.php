@@ -2,19 +2,35 @@
 session_start();
 $id=$_GET['id'];
 //echo $id;
-
 require('../../Controlador/conec.php');
+$qsa="UPDATE preventa SET statusenvio=1 WHERE idcliente='$id'"; 
+
+$ejecuta_qsa= mysqli_query($con,$qsa) or die("error al realizar update");
+
+
+
 $rss = mysqli_query($con, "SELECT * FROM preventa where idcliente='$id'");
 
 $row = mysqli_fetch_array($rss);
-                 
+    $tipin="Hotel";              
+    $idclien=$row['idcliente'];
 	$nombrecom=$row['nombrecom'];
 	$correoper=$row['correoper'];
 	$telefonoper=$row['telefonoper']; 
 	$ciudad=$row['ciudad']; 
 	$domicilio=$row['domicilio']; 
 	$dimensiones=$row['dimension']; 
-	
+
+$arr = array('tipin' => $tipin,
+             'idclien' => $idclien,
+             'nombrecom' => $nombrecom,
+             'correoper' => $correoper,
+             'telefonoper' => $telefonoper,
+             'ciudad' => $ciudad,
+             'domicilio' => $domicilio,
+             'dimensiones' => $dimensiones,
+);
+//echo json_encode($arr);
 mysqli_close($con);
 
 //////////////////////////////////////////////////////////////////////////////
@@ -40,31 +56,27 @@ mysqli_close($con);
     
     <link href="../../Content/css/animate.css" rel="stylesheet">
     <link href="../../Content/css/style.css" rel="stylesheet">
-<script>
+
+<!-- <script>
   
 $(document).ready(function(){
 
   $("#frmenvio").submit(function(){
 
-  	name="nombre"
-name="correo"
-name="telefono"
-name="tipo"
-name="ciudad"
-name="direccion"
-name="dimension"
-
-    var datospago={nombre:$("#nombre").val(),
+    var datosenvio={nombre:$("#nombre").val(),
                    correo:$("#correo").val(),
                    telefono:$("#telefono").val(),
                    tipo:$("#tipo").val(),
                    ciudad:$("#ciudad").val(),
                    direccion:$("#direccion").val(),
                	   dimension:$("#dimension").val()}
-    $.post("http://192.168.1.180:81/constructora/modulos/cotizacion.php",datospago);//.error(procesarerror);
+    //$.post("../../Controlador/consuclientejson/clientesjson.php",function(respuesta){
+    //  alert(respuesta);//.error(procesarerror);
+    $.post("http://192.168.0.251:81/constructora/modules/cliente1.php",datosenvio);
 
+//http://192.168.0.251:81/constructora/modulos/cotizacion.php
     //$.post("../../Controlador/consuclientejson/clientesjson.php",datospago);//.error(procesarerror);
-
+  
     return false;
 
   });
@@ -73,7 +85,7 @@ name="dimension"
 
     if (datos_devueltos) {
 
-      $("#contenido_externo").html("<br><div><p class='font-bold  alert alert-success m-b-sm'>Envio correcto</p> <br> <a href='casifinalizar.php' class='btn btn-success'>Finalizar</a><div>");
+      $("#contenido_externo2").html("<br><div><p class='font-bold  alert alert-success m-b-sm'>Envio correcto</p> <br><div>");
     
       document.getElementById("frmenvio").style.display = "none";
       
@@ -81,19 +93,19 @@ name="dimension"
 
     }
     else{
-      $("#contenido_externo").html("<br><div><p class='font-bold  alert alert-danger m-b-sm'>Envio fallido</p>");
+      $("#contenido_externo2").html("<br><div><p class='font-bold  alert alert-danger m-b-sm'>Envio fallido</p>");
     }
 
   }
   function procesarerror(){
     var msgerror="Oops a ocurrido un error, intentalo más tarde";
-    $("#contenido_externo").html("<br><div><p class='font-bold  alert alert-success m-b-sm'>"+msgerror+"</p> <br><div>");
+    $("#contenido_externo2").html("<br><div><p class='font-bold  alert alert-success m-b-sm'>"+msgerror+"</p> <br><div>");
   }
 
 });
 
 </script>
-
+ -->
 </head>
 
 <body >
@@ -187,8 +199,11 @@ name="dimension"
         </div>
         <div id="collapseTwo" class="panel-collapse collapse in">
             <div class="panel-body">
-<form  method="POST" action="../../Controlador/consuclientejson/clientesjson.php" id="frmenvio" class="form-group">
-
+<form  method="POST" action="http://192.168.43.195:81/constructora/modules/cliente1.php" id="frmenvio" class="form-group">
+                                 <div class="form-group col-md-6">
+                                    <input hidden readonly required type="text" name="id" id="id"  required="" value="<?php echo $idclien; ?>">
+                                </div>
+                                
                                 <div class="form-group col-md-6">
                                     <label>Nombre del cliente</label><input readonly required type="text" name="nombre" id="nombre" placeholder="Nombre completo" class="form-control
                                     " pattern="^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" title="Solo Permite Letras" required="" value="<?php echo $nombrecom; ?>">
@@ -201,7 +216,7 @@ name="dimension"
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Tipo de terreno</label><input readonly required type="text" name="tipo" id="tipo" placeholder="Residencial/Comercial" class="form-control
-                                    " required="" value="<?php echo 'Residencial'; ?>">
+                                    " required="" value="<?php echo 'Hotel'; ?>">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label>Cuidad</label><input readonly required type="text" name="ciudad" id="ciudad" placeholder="Ciudad" class="form-control
@@ -223,7 +238,7 @@ name="dimension"
                          </form>
 
 
-
+<div id="contenido_externo2"></div>
 
 
 

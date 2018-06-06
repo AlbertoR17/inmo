@@ -1,7 +1,7 @@
                     <?php
                     $iduser=$_SESSION["idusuario"];
                     require('../../Controlador/conec.php');
-                    $rs = mysqli_query($con, "SELECT * FROM terrenos where status=0");
+                    $rs = mysqli_query($con, "SELECT * FROM terrenos where status =0");
                     echo "<div class='wrapper wrapper-content animated fadeInRight'>
                     <div class='row'>";
                     while($row = mysqli_fetch_array($rs)){
@@ -54,22 +54,21 @@
                      <dd style='color:gray;'>".$zona."</dd>
                      </dl>
                     <br>
+                     <br>
+                     </div>
+                     <div >
                      
-                     </div>
-                     
-                     </div>
+                     </div><br><br>
                      </div>
                      </div>
                      </div>
                      </div>
-                     ";
+                     "; 
                  }
                  mysqli_close($con);
 
                  ?> 
-                 <!-- hasta aqui terrenos
-
-                    <a href='../../Controlador/seleccionaterreno.php?idc=".$iduser."&idt=".$idterreno."' class='btn btn-success btn-sm'> Seleccionar </a>  -->
+                 <!-- hasta aqui terrenos -->
              </div>
          </div>
  <!--

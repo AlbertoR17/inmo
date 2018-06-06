@@ -12,13 +12,15 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Inmobiliaria | Inicio</title>
+    <title>Inmobiliaria | Recepción</title>
 
     <link href="../../Content/css/bootstrap.min.css" rel="stylesheet">
     <link href="../../Content/font-awesome/css/font-awesome.css" rel="stylesheet">
 
     <link href="../../Content/css/animate.css" rel="stylesheet">
     <link href="../../Content/css/style.css" rel="stylesheet">
+    
+    <link href="../../Content/css/plugins/footable/footable.core.css" rel="stylesheet">
 
 </head>
 
@@ -44,8 +46,8 @@ session_start();
                 <?php //include('../Vista/Menu.php'); 
 
                 if ($_SESSION["tipouser"] === 'Administrador') {
-                       include('../../Vista/Admin/Menu.php');
-                    }else{
+                    include('../../Vista/Admin/Menu.php');
+                }else{
                         echo "<script>alert('Inicie sesion');</script>";
                         header("location: ../../Vista/login.php");
                     }
@@ -99,43 +101,11 @@ session_start();
 
 
         <div class="wrapper wrapper-content animated fadeInRight"  >
-            <div class="row" >
-                <div class="col-lg-12" >
-                    <div class="ibox float-e-margins">
-                        <div class="ibox-content text-center p-md">
-
-                            <h1><b><span class="text-navy">Bienvenido</span></b></h1>
-
-                            <p>
-                                <h2><b> <?php echo $_SESSION["nombre"];  ?></b></h2>
-                            </p>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
             <div class="row" >
                 <!-- Inicio de contenido --> 
-                <?php //include('../Vista/Section/');  ?>
-                <!-- Fin de contenido 
-            <input type="submit" id="ejecutar">--> 
-            <script>
-
-                $(function(){
-                    $("#ejecutar").click(function(){
-                        $.getJSON('../../Controlador/ws.php',{
-                            nombre:"hola",
-                            metodo:"Get"
-                        }, function(data){
-                            $.each(data,function(i, valor){
-                                console.log(i+" "+valor);
-                            });
-                        });
-                    });
-                });
-            </script>
-
+                <?php include('../../Vista/Admin/cont_envio.php'); ?>
+                <!-- Fin de contenido --> 
             </div>
         </div>
         <div class="footer" >
@@ -162,7 +132,16 @@ session_start();
 
 <script src="../../Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 
+<script src="../../Content/js/plugins/footable/footable.all.min.js"></script>
+<script>
+        $(document).ready(function() {
 
+            $('.footable').footable();
+            $('.footable2').footable();
+
+        });
+
+    </script>
 </body>
 
 

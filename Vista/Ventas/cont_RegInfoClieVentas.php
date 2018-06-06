@@ -91,7 +91,7 @@
 </script>
 <center>  
 <b>¿Ocupará factura?</b>
-<input type="checkbox" name="check" id="check" value="1" onchange="javascript:showContent()" />
+<input type="checkbox" name="check" id="check" value="1" onchange="showContent()" />
 </center>
 <div id="content" style="display: none;">
    <div class="col-lg-12">
@@ -119,9 +119,9 @@
 
     </div>
     <div class="col-lg-6">
-        <div class="form-group"><label class="col-sm-2 control-label">Referencia</label>
+        <!-- <div class="form-group"><label class="col-sm-2 control-label">Referencia</label>
           <div class="col-sm-10"><input type="text" name="referencia" placeholder="" class="form-control"></div>
-        </div>
+        </div> -->
         <div class="form-group"><label class="col-sm-2 control-label">Municipio</label>
           <div class="col-sm-10"><input type="text" name="municipio" placeholder="" class="form-control"></div>
         </div>

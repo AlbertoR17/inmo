@@ -18,7 +18,7 @@
                             <th>Apellido(s)</th>
                             <th>Email</th>
                             <th>Telefono</th>
-                            <th>Codigo del terreno</th>
+                            
                            <th>Acción</th> 
 
                         </tr>
@@ -36,14 +36,9 @@
                           echo "<td>" . $row['nombres'] .  "</td>";
                           echo "<td> ". $row['apellidos'] . "</td>";
                           echo "<td> ". $row['correoper'] . "</td>"; 
-                          echo "<td> ". $row['telefonoper'] . "</td>";
-                          echo "<td> ". $row['codterreno'] . "</td>"; 
+                          echo "<td> ". $row['telefonoper'] . "</td>"; 
                           echo "<td> 
-                                  
-                                  <form action='../../Controlador/compago.php' method='POST' >
-                                    <input type='hidden'   name='idc'  value='".$row['idventa']."' >
-                                    <button type='submit' class='btn btn-success'>Generar factura </button>
-                                  </form> 
+                                  <a href='../Admin/envicon.php?id=".$row['idcliente']."' class='btn btn-success'>Enviar</a> 
                                 </td>";  
                           echo "</tr>";   
                       }
@@ -57,7 +52,6 @@
                     <th>Apellido(s)</th>
                     <th>Email</th>
                     <th>Telefono</th>
-                    <th>Codigo del terreno</th>
                     
                     <th>Acción</th>
                 </tr>

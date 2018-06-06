@@ -4,18 +4,18 @@
 $(document).ready(function(){
 
   $("#payform").submit(function(){
-    var titu=$("#titular").val();
+    //var titu=$("#titular").val();
     var datospago={destino:$("#destino").val(),
                    precio:$("#precio").val(),
                    nutar:$("#nutar").val(),
                    cvc:$("#cvc").val(),
                    titular:$("#titular").val()}
-    $.post("https://horarios.itsonora.net/paquetes/transferencia",function(respuesta){
-      alert(respuesta);
-    });//.error(procesarerror);
+    /*$.post("../../Controlador/pagojson/pagojsn.php",function(respuesta){
+      alert(respuesta);//https://horarios.itsonora.net/paquetes/transferencia
+    });//.error(procesarerror);*/
 
-    $.post("https://horarios.itsonora.net/paquetes/transferencia",datospago, procesadatos);//.error(procesarerror);
-
+    $.post("https://horarios.itsonora.net/banco/transferencia",datospago, procesadatos);//.error(procesarerror); ////// https://horarios.itsonora.net/paquetes/transferencia
+//  ../../Controlador/pagojson/pagojsn.php
     return false;
 
   });

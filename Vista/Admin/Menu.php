@@ -25,8 +25,8 @@
 	<a href="../../Vista/Admin/clientelistopagoadmin.php"><i class="fa fa-check-square-o"></i> <span class="nav-label">Autorización de ventas</span></span></a>
 </li>
 <li>
-	<a href="../../Vista/Admin/finalizaradmin.php"><i class="fa fa-list-ul"></i> <span class="nav-label">Ventas finalizadas</span></span></a>
+	<a href="../../Vista/Admin/finalizaradmin.php"><i class="fa fa-list-ul"></i> <span class="nav-label">Ventas finalizadas y facturación</span></span></a>
 </li>
-<!-- <li>
-	<a href=""><i class="fa fa-files-o"></i> <span class="nav-label">Facturación</span></span></a>
-</li> -->
+ <li>
+	<a href="../../Vista/Admin/envio.php"><i class="fa fa-files-o"></i> <span class="nav-label">Envio de clientes</span></span></a>
+</li> 
